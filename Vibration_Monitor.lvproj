@@ -65,8 +65,10 @@
 		<Item Name="Type Definitions" Type="Folder">
 			<Item Name="UI_Data_Type.ctl" Type="VI" URL="../controls/UI_Data_Type.ctl"/>
 		</Item>
+		<Item Name="FGV_Data_Type.ctl" Type="VI" URL="../controls/FGV_Data_Type.ctl"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
+		<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../Store_Listener_Ref.vi"/>
 		<Item Name="Telemetry_Data_Type.ctl" Type="VI" URL="../controls/Telemetry_Data_Type.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">

@@ -14,6 +14,28 @@
         </Generic>
       </Probes>
     </VI>
+    <VI name="Main.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="4875"/>
+          <SignalUID value="2647"/>
+          <SignalUID value="4628"/>
+          <SignalUID value="4450"/>
+          <SignalUID value="5128"/>
+          <SignalUID value="5102"/>
+          <SignalUID value="5115"/>
+          <SignalUID value="4803"/>
+          <SignalUID value="3718"/>
+          <SignalUID value="964"/>
+        </Generic>
+      </Probes>
+    </VI>
     <VI name="TCP_Scratchpad.vi">
       <Breakpoints>
         <NodeIndexes>
