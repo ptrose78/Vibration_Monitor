@@ -63,10 +63,11 @@
 			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../support/Error Handler - Message Handling Loop.vi"/>
 		</Item>
 		<Item Name="Type Definitions" Type="Folder">
-			<Item Name="UI Data.ctl" Type="VI" URL="../controls/UI Data.ctl"/>
+			<Item Name="UI_Data_Type.ctl" Type="VI" URL="../controls/UI_Data_Type.ctl"/>
 		</Item>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
+		<Item Name="Telemetry_Data_Type.ctl" Type="VI" URL="../controls/Telemetry_Data_Type.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
