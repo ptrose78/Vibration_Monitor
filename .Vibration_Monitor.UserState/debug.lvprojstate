@@ -1,5 +1,18 @@
 <Configuration>
   <Target name="My Computer">
     <EnableDebuggingForAllVIs>0</EnableDebuggingForAllVIs>
+    <VI name="TCP_Scratchpad.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1244"/>
+        </Generic>
+      </Probes>
+    </VI>
   </Target>
 </Configuration>
