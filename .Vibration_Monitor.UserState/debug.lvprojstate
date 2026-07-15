@@ -1,18 +1,6 @@
 <Configuration>
   <Target name="My Computer">
     <EnableDebuggingForAllVIs>0</EnableDebuggingForAllVIs>
-    <VI name="DB_Scratchpad.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-        </Generic>
-      </Probes>
-    </VI>
     <VI name="Main.vi">
       <Breakpoints>
         <NodeIndexes>
@@ -27,9 +15,15 @@
           <SignalUID value="4803"/>
           <SignalUID value="964"/>
           <SignalUID value="2394"/>
-          <SignalUID value="4587"/>
-          <SignalUID value="3545"/>
-          <SignalUID value="4441"/>
+          <SignalUID value="3888"/>
+          <SignalUID value="5168"/>
+          <SignalUID value="504"/>
+          <SignalUID value="4520"/>
+          <SignalUID value="5809"/>
+          <SignalUID value="3650"/>
+          <SignalUID value="2105"/>
+          <SignalUID value="3718"/>
+          <SignalUID value="3734"/>
         </Generic>
       </Probes>
     </VI>
