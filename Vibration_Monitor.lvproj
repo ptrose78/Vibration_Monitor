@@ -74,6 +74,7 @@
 		<Item Name="LoadApplicationConfig.vi" Type="VI" URL="../LoadApplicationConfig.vi"/>
 		<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../Store_Listener_Ref.vi"/>
 		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
+		<Item Name="Vibration_Profile.ctl" Type="VI" URL="../controls/Vibration_Profile.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
