@@ -21,4 +21,5 @@
 	<Item Name="Stop Acquisition.vi" Type="VI" URL="../Stop Acquisition.vi"/>
 	<Item Name="Error Handler - Acquisition Message Loop.vi" Type="VI" URL="../Error Handler - Acquisition Message Loop.vi"/>
 	<Item Name="Get Task Name.vi" Type="VI" URL="../Get Task Name.vi"/>
+	<Item Name="Get Vibration Profile.vi" Type="VI" URL="../Get Vibration Profile.vi"/>
 </Library>
