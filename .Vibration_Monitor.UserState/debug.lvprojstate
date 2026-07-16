@@ -1,7 +1,7 @@
 <Configuration>
   <Target name="My Computer">
     <EnableDebuggingForAllVIs>0</EnableDebuggingForAllVIs>
-    <VI name="File IO.vi">
+    <VI name="LoadApplicationConfig.vi">
       <Breakpoints>
         <NodeIndexes>
         </NodeIndexes>

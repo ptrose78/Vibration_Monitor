@@ -13,6 +13,7 @@
 		<Property Name="IOScan.Priority" Type="UInt">9</Property>
 		<Property Name="IOScan.ReportModeConflict" Type="Bool">true</Property>
 		<Property Name="IOScan.StartEngineOnDeploy" Type="Bool">false</Property>
+		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -63,15 +64,16 @@
 			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../support/Error Handler - Message Handling Loop.vi"/>
 		</Item>
 		<Item Name="Type Definitions" Type="Folder">
+			<Item Name="FGV_Data_Type.ctl" Type="VI" URL="../controls/FGV_Data_Type.ctl"/>
+			<Item Name="Telemetry_Data_Type.ctl" Type="VI" URL="../controls/Telemetry_Data_Type.ctl"/>
 			<Item Name="UI_Data_Type.ctl" Type="VI" URL="../controls/UI_Data_Type.ctl"/>
+			<Item Name="Vibration_Monitor_Config.ctl" Type="VI" URL="../controls/Vibration_Monitor_Config.ctl"/>
 		</Item>
-		<Item Name="FGV_Data_Type.ctl" Type="VI" URL="../controls/FGV_Data_Type.ctl"/>
-		<Item Name="File IO.vi" Type="VI" URL="../File IO.vi"/>
+		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
-		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
+		<Item Name="LoadApplicationConfig.vi" Type="VI" URL="../LoadApplicationConfig.vi"/>
 		<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../Store_Listener_Ref.vi"/>
-		<Item Name="Telemetry_Data_Type.ctl" Type="VI" URL="../controls/Telemetry_Data_Type.ctl"/>
-		<Item Name="Vibration_Monitor_Config.ctl" Type="VI" URL="../controls/Vibration_Monitor_Config.ctl"/>
+		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
