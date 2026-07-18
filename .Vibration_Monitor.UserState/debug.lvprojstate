@@ -1,6 +1,19 @@
 <Configuration>
   <Target name="My Computer">
     <EnableDebuggingForAllVIs>0</EnableDebuggingForAllVIs>
+    <VI name="Acquisition.lvlib:Acquire.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1950"/>
+        </Generic>
+      </Probes>
+    </VI>
     <VI name="LoadApplicationConfig.vi">
       <Breakpoints>
         <NodeIndexes>
@@ -36,8 +49,19 @@
           <SignalUID value="3718"/>
           <SignalUID value="3734"/>
           <SignalUID value="3951"/>
-          <SignalUID value="4324"/>
           <SignalUID value="5076"/>
+          <SignalUID value="6964"/>
+          <SignalUID value="6988"/>
+          <SignalUID value="6793"/>
+          <SignalUID value="6850"/>
+          <SignalUID value="7356"/>
+          <SignalUID value="7660"/>
+          <SignalUID value="7409"/>
+          <SignalUID value="7211"/>
+          <SignalUID value="8035"/>
+          <SignalUID value="5296"/>
+          <SignalUID value="6445"/>
+          <SignalUID value="7108"/>
         </Generic>
       </Probes>
     </VI>

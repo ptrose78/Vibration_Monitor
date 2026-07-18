@@ -22,4 +22,7 @@
 	<Item Name="Error Handler - Acquisition Message Loop.vi" Type="VI" URL="../Error Handler - Acquisition Message Loop.vi"/>
 	<Item Name="Get Task Name.vi" Type="VI" URL="../Get Task Name.vi"/>
 	<Item Name="Get Vibration Profile.vi" Type="VI" URL="../Get Vibration Profile.vi"/>
+	<Item Name="Get System Settings.vi" Type="VI" URL="../Get System Settings.vi"/>
+	<Item Name="Generate Simulated Data v2.0.vi" Type="VI" URL="../Generate Simulated Data v2.0.vi"/>
+	<Item Name="Get Number of Channels.vi" Type="VI" URL="../Get Number of Channels.vi"/>
 </Library>
