@@ -11,6 +11,66 @@
       <Probes>
         <Generic>
           <SignalUID value="1950"/>
+          <SignalUID value="2309"/>
+          <SignalUID value="6251"/>
+          <SignalUID value="2759"/>
+          <SignalUID value="6254"/>
+          <SignalUID value="2442"/>
+          <SignalUID value="6324"/>
+          <SignalUID value="1066"/>
+          <SignalUID value="2977"/>
+          <SignalUID value="2658"/>
+          <SignalUID value="1948"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Acquisition.lvlib:Acquisition Message Loop.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="229"/>
+          <SignalUID value="1572"/>
+          <SignalUID value="2517"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Acquisition.lvlib:Configure Hardware.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="256"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Get Telemetry Data.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="310"/>
+          <SignalUID value="108"/>
+          <SignalUID value="313"/>
+          <SignalUID value="316"/>
+          <SignalUID value="344"/>
+          <SignalUID value="325"/>
+          <SignalUID value="1724"/>
+          <SignalUID value="350"/>
+          <SignalUID value="353"/>
+          <SignalUID value="688"/>
         </Generic>
       </Probes>
     </VI>
@@ -51,17 +111,12 @@
           <SignalUID value="3951"/>
           <SignalUID value="5076"/>
           <SignalUID value="6964"/>
-          <SignalUID value="6988"/>
-          <SignalUID value="6793"/>
           <SignalUID value="6850"/>
-          <SignalUID value="7356"/>
           <SignalUID value="7660"/>
           <SignalUID value="7409"/>
           <SignalUID value="7211"/>
           <SignalUID value="8035"/>
-          <SignalUID value="5296"/>
-          <SignalUID value="6445"/>
-          <SignalUID value="7108"/>
+          <SignalUID value="4587"/>
         </Generic>
       </Probes>
     </VI>

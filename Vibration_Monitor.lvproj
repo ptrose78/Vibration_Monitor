@@ -77,6 +77,10 @@
 		<Item Name="Vibration_Profile.ctl" Type="VI" URL="../controls/Vibration_Profile.ctl"/>
 		<Item Name="System_Settings.ctl" Type="VI" URL="../controls/System_Settings.ctl"/>
 		<Item Name="Options.ctl" Type="VI" URL="../controls/Options.ctl"/>
+		<Item Name="Get Telemetry Data.vi" Type="VI" URL="../Get Telemetry Data.vi"/>
+		<Item Name="Vibration_Data_Packet.ctl" Type="VI" URL="../controls/Vibration_Data_Packet.ctl"/>
+		<Item Name="Channels.ctl" Type="VI" URL="../controls/Channels.ctl"/>
+		<Item Name="Write Telemetry Data To DB.vi" Type="VI" URL="../Database/Write Telemetry Data To DB.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
