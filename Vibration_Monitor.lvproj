@@ -94,6 +94,8 @@
 		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
+		<Item Name="Waveforms.ctl" Type="VI" URL="../controls/Waveforms.ctl"/>
+		<Item Name="Acquisition Metrics.ctl" Type="VI" URL="../Acquisition/Acquisition Metrics.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
