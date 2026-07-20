@@ -60,27 +60,37 @@
 			<Item Name="Message Queue.lvlib" Type="Library" URL="../support/Message Queue/Message Queue.lvlib"/>
 			<Item Name="User Event - Stop.lvlib" Type="Library" URL="../support/User Event - Stop/User Event - Stop.lvlib"/>
 			<Item Name="Check Loop Error.vi" Type="VI" URL="../support/Check Loop Error.vi"/>
+			<Item Name="LoadApplicationConfig.vi" Type="VI" URL="../support/LoadApplicationConfig.vi"/>
 			<Item Name="Error Handler - Event Handling Loop.vi" Type="VI" URL="../support/Error Handler - Event Handling Loop.vi"/>
+			<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../support/Store_Listener_Ref.vi"/>
 			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../support/Error Handler - Message Handling Loop.vi"/>
 		</Item>
 		<Item Name="Type Definitions" Type="Folder">
 			<Item Name="FGV_Data_Type.ctl" Type="VI" URL="../controls/FGV_Data_Type.ctl"/>
 			<Item Name="Telemetry_Data_Type.ctl" Type="VI" URL="../controls/Telemetry_Data_Type.ctl"/>
+			<Item Name="Vibration_Profile.ctl" Type="VI" URL="../controls/Vibration_Profile.ctl"/>
 			<Item Name="UI_Data_Type.ctl" Type="VI" URL="../controls/UI_Data_Type.ctl"/>
+			<Item Name="System_Settings.ctl" Type="VI" URL="../controls/System_Settings.ctl"/>
+			<Item Name="Options.ctl" Type="VI" URL="../controls/Options.ctl"/>
+			<Item Name="Channels.ctl" Type="VI" URL="../controls/Channels.ctl"/>
 			<Item Name="Vibration_Monitor_Config.ctl" Type="VI" URL="../controls/Vibration_Monitor_Config.ctl"/>
+			<Item Name="Vibration_Data_Packet.ctl" Type="VI" URL="../controls/Vibration_Data_Packet.ctl"/>
+		</Item>
+		<Item Name="TCP" Type="Folder" URL="../TCP">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="Database" Type="Folder" URL="../Database">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="Lib" Type="Folder" URL="../Lib">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="Scripts" Type="Folder" URL="../Scripts">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
-		<Item Name="LoadApplicationConfig.vi" Type="VI" URL="../LoadApplicationConfig.vi"/>
-		<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../Store_Listener_Ref.vi"/>
 		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
-		<Item Name="Vibration_Profile.ctl" Type="VI" URL="../controls/Vibration_Profile.ctl"/>
-		<Item Name="System_Settings.ctl" Type="VI" URL="../controls/System_Settings.ctl"/>
-		<Item Name="Options.ctl" Type="VI" URL="../controls/Options.ctl"/>
-		<Item Name="Get Telemetry Data.vi" Type="VI" URL="../Get Telemetry Data.vi"/>
-		<Item Name="Vibration_Data_Packet.ctl" Type="VI" URL="../controls/Vibration_Data_Packet.ctl"/>
-		<Item Name="Channels.ctl" Type="VI" URL="../controls/Channels.ctl"/>
-		<Item Name="Write Telemetry Data To DB.vi" Type="VI" URL="../Database/Write Telemetry Data To DB.vi"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
