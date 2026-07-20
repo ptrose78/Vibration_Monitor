@@ -52,6 +52,21 @@
         </Generic>
       </Probes>
     </VI>
+    <VI name="Data Logging Message Loop.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="3242"/>
+          <SignalUID value="1766"/>
+          <SignalUID value="1778"/>
+        </Generic>
+      </Probes>
+    </VI>
     <VI name="Get Telemetry Data.vi">
       <Breakpoints>
         <NodeIndexes>
