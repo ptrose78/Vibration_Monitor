@@ -11,21 +11,11 @@
       <Probes>
         <Generic>
           <SignalUID value="1950"/>
-          <SignalUID value="2309"/>
-          <SignalUID value="6251"/>
-          <SignalUID value="2759"/>
-          <SignalUID value="6254"/>
-          <SignalUID value="2442"/>
-          <SignalUID value="6324"/>
-          <SignalUID value="1066"/>
-          <SignalUID value="2977"/>
-          <SignalUID value="2658"/>
-          <SignalUID value="1948"/>
-          <SignalUID value="2108"/>
+          <SignalUID value="2688"/>
         </Generic>
       </Probes>
     </VI>
-    <VI name="Acquisition.lvlib:Acquisition Message Loop.vi">
+    <VI name="Acquisition.lvlib:Determine Condition.vi">
       <Breakpoints>
         <NodeIndexes>
         </NodeIndexes>
@@ -34,13 +24,13 @@
       </Breakpoints>
       <Probes>
         <Generic>
-          <SignalUID value="229"/>
-          <SignalUID value="1572"/>
-          <SignalUID value="2517"/>
+          <SignalUID value="1771"/>
+          <SignalUID value="1184"/>
+          <SignalUID value="1231"/>
         </Generic>
       </Probes>
     </VI>
-    <VI name="Acquisition.lvlib:Configure Hardware.vi">
+    <VI name="Acquisition.lvlib:Get Alarm Status.vi">
       <Breakpoints>
         <NodeIndexes>
         </NodeIndexes>
@@ -49,7 +39,7 @@
       </Breakpoints>
       <Probes>
         <Generic>
-          <SignalUID value="256"/>
+          <SignalUID value="1111"/>
         </Generic>
       </Probes>
     </VI>
@@ -72,6 +62,8 @@
           <SignalUID value="106"/>
           <SignalUID value="500"/>
           <SignalUID value="834"/>
+          <SignalUID value="807"/>
+          <SignalUID value="740"/>
         </Generic>
       </Probes>
     </VI>
