@@ -12,6 +12,31 @@
         <Generic>
           <SignalUID value="1950"/>
           <SignalUID value="2688"/>
+          <SignalUID value="298"/>
+          <SignalUID value="4913"/>
+          <SignalUID value="2309"/>
+          <SignalUID value="2749"/>
+          <SignalUID value="1948"/>
+          <SignalUID value="1298"/>
+          <SignalUID value="2815"/>
+          <SignalUID value="2045"/>
+          <SignalUID value="4147"/>
+          <SignalUID value="2374"/>
+          <SignalUID value="2929"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Acquisition.lvlib:Configure Hardware.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1753"/>
+          <SignalUID value="1769"/>
         </Generic>
       </Probes>
     </VI>
@@ -27,6 +52,20 @@
           <SignalUID value="1771"/>
           <SignalUID value="1184"/>
           <SignalUID value="1231"/>
+          <SignalUID value="307"/>
+          <SignalUID value="424"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Acquisition.lvlib:Find RMS Velocity in_s .vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
         </Generic>
       </Probes>
     </VI>
@@ -132,6 +171,38 @@
           <SignalUID value="7211"/>
           <SignalUID value="8035"/>
           <SignalUID value="4587"/>
+          <SignalUID value="8148"/>
+          <SignalUID value="6649"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="TCP Message Loop.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1033"/>
+          <SignalUID value="1036"/>
+          <SignalUID value="1048"/>
+          <SignalUID value="1060"/>
+          <SignalUID value="367"/>
+          <SignalUID value="331"/>
+          <SignalUID value="2759"/>
+          <SignalUID value="334"/>
+          <SignalUID value="5643"/>
+          <SignalUID value="5021"/>
+          <SignalUID value="5729"/>
+          <SignalUID value="5044"/>
+          <SignalUID value="4515"/>
+          <SignalUID value="4861"/>
+          <SignalUID value="2746"/>
+          <SignalUID value="4953"/>
+          <SignalUID value="5927"/>
+          <SignalUID value="4328"/>
         </Generic>
       </Probes>
     </VI>

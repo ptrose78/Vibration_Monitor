@@ -97,6 +97,201 @@
 		<Item Name="Waveforms.ctl" Type="VI" URL="../controls/Waveforms.ctl"/>
 		<Item Name="Acquisition Metrics.ctl" Type="VI" URL="../Acquisition/Acquisition Metrics.ctl"/>
 		<Item Name="Alarms.ctl" Type="VI" URL="../Acquisition/Alarms.ctl"/>
+		<Item Name="Local_Multi_Point_Task" Type="NI-DAQmx Task">
+			<Property Name="\0\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\0\AI.Accel.Sensitivity" Type="Str">100</Property>
+			<Property Name="\0\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\0\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\0\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\0\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\0\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\0\AI.Max" Type="Str">5</Property>
+			<Property Name="\0\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\0\AI.Min" Type="Str">-5</Property>
+			<Property Name="\0\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\0\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\0\Name" Type="Str">Local_Multi_Point_Task/Acceleration_0</Property>
+			<Property Name="\0\PhysicalChanName" Type="Str">cDAQ3Mod1/ai0</Property>
+			<Property Name="\1\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\1\AI.Accel.Sensitivity" Type="Str">1000</Property>
+			<Property Name="\1\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\1\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\1\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\1\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\1\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\1\AI.Max" Type="Str">5</Property>
+			<Property Name="\1\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\1\AI.Min" Type="Str">-5</Property>
+			<Property Name="\1\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\1\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\1\Name" Type="Str">Local_Multi_Point_Task/Acceleration_1</Property>
+			<Property Name="\1\PhysicalChanName" Type="Str">cDAQ3Mod1/ai1</Property>
+			<Property Name="\2\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\2\AI.Accel.Sensitivity" Type="Str">1000</Property>
+			<Property Name="\2\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\2\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\2\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\2\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\2\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\2\AI.Max" Type="Str">5</Property>
+			<Property Name="\2\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\2\AI.Min" Type="Str">-5</Property>
+			<Property Name="\2\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\2\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\2\Name" Type="Str">Local_Multi_Point_Task/Acceleration_2</Property>
+			<Property Name="\2\PhysicalChanName" Type="Str">cDAQ3Mod1/ai2</Property>
+			<Property Name="\3\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\3\AI.Accel.Sensitivity" Type="Str">1000</Property>
+			<Property Name="\3\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\3\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\3\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\3\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\3\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\3\AI.Max" Type="Str">5</Property>
+			<Property Name="\3\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\3\AI.Min" Type="Str">-5</Property>
+			<Property Name="\3\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\3\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\3\Name" Type="Str">Local_Multi_Point_Task/Acceleration_3</Property>
+			<Property Name="\3\PhysicalChanName" Type="Str">cDAQ3Mod1/ai3</Property>
+			<Property Name="\4\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\4\AI.Accel.Sensitivity" Type="Str">1000</Property>
+			<Property Name="\4\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\4\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\4\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\4\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\4\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\4\AI.Max" Type="Str">5</Property>
+			<Property Name="\4\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\4\AI.Min" Type="Str">-5</Property>
+			<Property Name="\4\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\4\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\4\Name" Type="Str">Local_Multi_Point_Task/Acceleration_4</Property>
+			<Property Name="\4\PhysicalChanName" Type="Str">cDAQ3Mod1/ai4</Property>
+			<Property Name="\5\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\5\AI.Accel.Sensitivity" Type="Str">1000</Property>
+			<Property Name="\5\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\5\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\5\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\5\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\5\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\5\AI.Max" Type="Str">5</Property>
+			<Property Name="\5\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\5\AI.Min" Type="Str">-5</Property>
+			<Property Name="\5\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\5\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\5\Name" Type="Str">Local_Multi_Point_Task/Acceleration_5</Property>
+			<Property Name="\5\PhysicalChanName" Type="Str">cDAQ3Mod1/ai5</Property>
+			<Property Name="\6\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\6\AI.Accel.Sensitivity" Type="Str">1000</Property>
+			<Property Name="\6\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\6\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\6\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\6\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\6\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\6\AI.Max" Type="Str">5</Property>
+			<Property Name="\6\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\6\AI.Min" Type="Str">-5</Property>
+			<Property Name="\6\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\6\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\6\Name" Type="Str">Local_Multi_Point_Task/Acceleration_6</Property>
+			<Property Name="\6\PhysicalChanName" Type="Str">cDAQ3Mod1/ai6</Property>
+			<Property Name="\7\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\7\AI.Accel.Sensitivity" Type="Str">1000</Property>
+			<Property Name="\7\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\7\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\7\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\7\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\7\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\7\AI.Max" Type="Str">5</Property>
+			<Property Name="\7\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\7\AI.Min" Type="Str">-5</Property>
+			<Property Name="\7\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\7\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\7\Name" Type="Str">Local_Multi_Point_Task/Acceleration_7</Property>
+			<Property Name="\7\PhysicalChanName" Type="Str">cDAQ3Mod1/ai7</Property>
+			<Property Name="Channels" Type="Str">Local_Multi_Point_Task/Acceleration_0, Local_Multi_Point_Task/Acceleration_1, Local_Multi_Point_Task/Acceleration_2, Local_Multi_Point_Task/Acceleration_3, Local_Multi_Point_Task/Acceleration_4, Local_Multi_Point_Task/Acceleration_5, Local_Multi_Point_Task/Acceleration_6, Local_Multi_Point_Task/Acceleration_7</Property>
+			<Property Name="Name" Type="Str">Local_Multi_Point_Task</Property>
+			<Property Name="SampClk.ActiveEdge" Type="Str">Rising</Property>
+			<Property Name="SampClk.Rate" Type="Str">25600</Property>
+			<Property Name="SampQuant.SampMode" Type="Str">Continuous Samples</Property>
+			<Property Name="SampQuant.SampPerChan" Type="Str">25600</Property>
+			<Property Name="SampTimingType" Type="Str">Sample Clock</Property>
+		</Item>
+		<Item Name="Local_3_Axis_Analysis_Task" Type="NI-DAQmx Task">
+			<Property Name="\0\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\0\AI.Accel.Sensitivity" Type="Str">100</Property>
+			<Property Name="\0\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\0\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\0\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\0\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\0\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\0\AI.Max" Type="Str">5</Property>
+			<Property Name="\0\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\0\AI.Min" Type="Str">-5</Property>
+			<Property Name="\0\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\0\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\0\Name" Type="Str">Local_3_Axis_Analysis_Task/Acceleration_0</Property>
+			<Property Name="\0\PhysicalChanName" Type="Str">cDAQ3Mod1/ai0</Property>
+			<Property Name="\1\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\1\AI.Accel.Sensitivity" Type="Str">1000</Property>
+			<Property Name="\1\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\1\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\1\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\1\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\1\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\1\AI.Max" Type="Str">5</Property>
+			<Property Name="\1\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\1\AI.Min" Type="Str">-5</Property>
+			<Property Name="\1\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\1\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\1\Name" Type="Str">Local_3_Axis_Analysis_Task/Acceleration_1</Property>
+			<Property Name="\1\PhysicalChanName" Type="Str">cDAQ3Mod1/ai1</Property>
+			<Property Name="\2\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\2\AI.Accel.Sensitivity" Type="Str">1000</Property>
+			<Property Name="\2\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\2\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\2\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\2\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\2\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\2\AI.Max" Type="Str">5</Property>
+			<Property Name="\2\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\2\AI.Min" Type="Str">-5</Property>
+			<Property Name="\2\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\2\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\2\Name" Type="Str">Local_3_Axis_Analysis_Task/Acceleration_2</Property>
+			<Property Name="\2\PhysicalChanName" Type="Str">cDAQ3Mod1/ai2</Property>
+			<Property Name="Channels" Type="Str">Local_3_Axis_Analysis_Task/Acceleration_0, Local_3_Axis_Analysis_Task/Acceleration_1, Local_3_Axis_Analysis_Task/Acceleration_2</Property>
+			<Property Name="Name" Type="Str">Local_3_Axis_Analysis_Task</Property>
+			<Property Name="SampClk.ActiveEdge" Type="Str">Rising</Property>
+			<Property Name="SampClk.Rate" Type="Str">25600</Property>
+			<Property Name="SampQuant.SampMode" Type="Str">Continuous Samples</Property>
+			<Property Name="SampQuant.SampPerChan" Type="Str">25600</Property>
+			<Property Name="SampTimingType" Type="Str">Sample Clock</Property>
+		</Item>
+		<Item Name="Local_Basic_Health_Task" Type="NI-DAQmx Task">
+			<Property Name="\0\AI.Accel.dBRef" Type="Str">1</Property>
+			<Property Name="\0\AI.Accel.Sensitivity" Type="Str">100</Property>
+			<Property Name="\0\AI.Accel.SensitivityUnits" Type="Str">mVolts/g</Property>
+			<Property Name="\0\AI.Accel.Units" Type="Str">g</Property>
+			<Property Name="\0\AI.Excit.Src" Type="Str">Internal</Property>
+			<Property Name="\0\AI.Excit.Val" Type="Str">0.002</Property>
+			<Property Name="\0\AI.Excit.VoltageOrCurrent" Type="Str">Current</Property>
+			<Property Name="\0\AI.Max" Type="Str">5</Property>
+			<Property Name="\0\AI.MeasType" Type="Str">Accelerometer</Property>
+			<Property Name="\0\AI.Min" Type="Str">-5</Property>
+			<Property Name="\0\AI.TermCfg" Type="Str">Pseudodifferential</Property>
+			<Property Name="\0\ChanType" Type="Str">Analog Input</Property>
+			<Property Name="\0\Name" Type="Str">Local_Basic_Health_Task/Acceleration</Property>
+			<Property Name="\0\PhysicalChanName" Type="Str">cDAQ3Mod1/ai0</Property>
+			<Property Name="Channels" Type="Str">Local_Basic_Health_Task/Acceleration</Property>
+			<Property Name="Name" Type="Str">Local_Basic_Health_Task</Property>
+			<Property Name="SampClk.ActiveEdge" Type="Str">Rising</Property>
+			<Property Name="SampClk.Rate" Type="Str">25600</Property>
+			<Property Name="SampQuant.SampMode" Type="Str">Continuous Samples</Property>
+			<Property Name="SampQuant.SampPerChan" Type="Str">25600</Property>
+			<Property Name="SampTimingType" Type="Str">Sample Clock</Property>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
