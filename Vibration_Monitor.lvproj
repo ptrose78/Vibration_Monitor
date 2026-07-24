@@ -65,16 +65,8 @@
 			<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../support/Store_Listener_Ref.vi"/>
 			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../support/Error Handler - Message Handling Loop.vi"/>
 		</Item>
-		<Item Name="Type Definitions" Type="Folder">
-			<Item Name="FGV_Data_Type.ctl" Type="VI" URL="../controls/FGV_Data_Type.ctl"/>
-			<Item Name="Telemetry_Data_Type.ctl" Type="VI" URL="../controls/Telemetry_Data_Type.ctl"/>
-			<Item Name="Vibration_Profile.ctl" Type="VI" URL="../controls/Vibration_Profile.ctl"/>
-			<Item Name="UI_Data_Type.ctl" Type="VI" URL="../controls/UI_Data_Type.ctl"/>
-			<Item Name="System_Settings.ctl" Type="VI" URL="../controls/System_Settings.ctl"/>
-			<Item Name="Options.ctl" Type="VI" URL="../controls/Options.ctl"/>
-			<Item Name="Channels.ctl" Type="VI" URL="../controls/Channels.ctl"/>
-			<Item Name="Vibration_Monitor_Config.ctl" Type="VI" URL="../controls/Vibration_Monitor_Config.ctl"/>
-			<Item Name="Vibration_Data_Packet.ctl" Type="VI" URL="../controls/Vibration_Data_Packet.ctl"/>
+		<Item Name="controls" Type="Folder" URL="../controls">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="TCP" Type="Folder" URL="../TCP">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -94,7 +86,6 @@
 		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
-		<Item Name="Waveforms.ctl" Type="VI" URL="../controls/Waveforms.ctl"/>
 		<Item Name="Acquisition Metrics.ctl" Type="VI" URL="../Acquisition/Acquisition Metrics.ctl"/>
 		<Item Name="Alarms.ctl" Type="VI" URL="../Acquisition/Alarms.ctl"/>
 		<Item Name="Local_Multi_Point_Task" Type="NI-DAQmx Task">

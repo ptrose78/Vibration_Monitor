@@ -26,6 +26,26 @@
         </Generic>
       </Probes>
     </VI>
+    <VI name="Acquisition.lvlib:Acquisition Message Loop.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="2291"/>
+          <SignalUID value="2540"/>
+          <SignalUID value="1451"/>
+          <SignalUID value="1302"/>
+          <SignalUID value="1237"/>
+          <SignalUID value="3428"/>
+          <SignalUID value="3464"/>
+          <SignalUID value="2215"/>
+        </Generic>
+      </Probes>
+    </VI>
     <VI name="Acquisition.lvlib:Configure Hardware.vi">
       <Breakpoints>
         <NodeIndexes>
@@ -57,18 +77,6 @@
         </Generic>
       </Probes>
     </VI>
-    <VI name="Acquisition.lvlib:Find RMS Velocity in_s .vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-        </Generic>
-      </Probes>
-    </VI>
     <VI name="Acquisition.lvlib:Get Alarm Status.vi">
       <Breakpoints>
         <NodeIndexes>
@@ -79,6 +87,80 @@
       <Probes>
         <Generic>
           <SignalUID value="1111"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Check Loop Error.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1127"/>
+          <SignalUID value="2267"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Check Loop Error.vi:760001">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1067"/>
+          <SignalUID value="339"/>
+          <SignalUID value="851"/>
+          <SignalUID value="1385"/>
+          <SignalUID value="2134"/>
+          <SignalUID value="1782"/>
+          <SignalUID value="2267"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Check Loop Error.vi:760002">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+          <Signal index="1127" enabled="1"/>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="339"/>
+          <SignalUID value="851"/>
+          <SignalUID value="1782"/>
+          <SignalUID value="383"/>
+          <SignalUID value="1067"/>
+          <SignalUID value="2134"/>
+          <SignalUID value="806"/>
+          <SignalUID value="2267"/>
+          <SignalUID value="450"/>
+          <SignalUID value="1385"/>
+          <SignalUID value="1127"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="DB Message Loop.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1392"/>
+          <SignalUID value="2608"/>
+          <SignalUID value="3554"/>
+          <SignalUID value="2611"/>
+          <SignalUID value="1386"/>
         </Generic>
       </Probes>
     </VI>
@@ -98,11 +180,25 @@
           <SignalUID value="400"/>
           <SignalUID value="123"/>
           <SignalUID value="1117"/>
-          <SignalUID value="106"/>
           <SignalUID value="500"/>
           <SignalUID value="834"/>
           <SignalUID value="807"/>
           <SignalUID value="740"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Error Handler - Message Handling Loop.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="950"/>
+          <SignalUID value="228"/>
+          <SignalUID value="955"/>
         </Generic>
       </Probes>
     </VI>
@@ -171,6 +267,26 @@
           <SignalUID value="7211"/>
           <SignalUID value="8035"/>
           <SignalUID value="4587"/>
+          <SignalUID value="2625"/>
+          <SignalUID value="1940"/>
+          <SignalUID value="2706"/>
+          <SignalUID value="2994"/>
+          <SignalUID value="5024"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Message Queue.lvlib:Enqueue Message (Single).vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1497"/>
+          <SignalUID value="1473"/>
+          <SignalUID value="1420"/>
         </Generic>
       </Probes>
     </VI>
@@ -189,7 +305,6 @@
           <SignalUID value="1060"/>
           <SignalUID value="367"/>
           <SignalUID value="331"/>
-          <SignalUID value="2759"/>
           <SignalUID value="334"/>
           <SignalUID value="5643"/>
           <SignalUID value="5021"/>
@@ -201,6 +316,8 @@
           <SignalUID value="4953"/>
           <SignalUID value="5927"/>
           <SignalUID value="4328"/>
+          <SignalUID value="2759"/>
+          <SignalUID value="1151"/>
         </Generic>
       </Probes>
     </VI>
@@ -214,6 +331,22 @@
       <Probes>
         <Generic>
           <SignalUID value="1244"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Write System Error To DB.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1268"/>
+          <SignalUID value="1175"/>
+          <SignalUID value="1642"/>
+          <SignalUID value="1302"/>
         </Generic>
       </Probes>
     </VI>
