@@ -283,6 +283,7 @@
 			<Property Name="SampQuant.SampPerChan" Type="Str">25600</Property>
 			<Property Name="SampTimingType" Type="Str">Sample Clock</Property>
 		</Item>
+		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
