@@ -23,7 +23,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="Documentation Images" Type="Folder">
+		<Item Name="Documentation" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="loc_access_task_data.png" Type="Document" URL="../documentation/loc_access_task_data.png"/>
 			<Item Name="loc_bundle_new_button_ref.png" Type="Document" URL="../documentation/loc_bundle_new_button_ref.png"/>
@@ -52,10 +52,7 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 			<Property Name="NI.SortType" Type="Int">3</Property>
 		</Item>
-		<Item Name="scratchpads" Type="Folder" URL="../scratchpads">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
-		<Item Name="Support VIs" Type="Folder">
+		<Item Name="Support" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Message Queue.lvlib" Type="Library" URL="../support/Message Queue/Message Queue.lvlib"/>
 			<Item Name="User Event - Stop.lvlib" Type="Library" URL="../support/User Event - Stop/User Event - Stop.lvlib"/>
@@ -64,9 +61,6 @@
 			<Item Name="Error Handler - Event Handling Loop.vi" Type="VI" URL="../support/Error Handler - Event Handling Loop.vi"/>
 			<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../support/Store_Listener_Ref.vi"/>
 			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../support/Error Handler - Message Handling Loop.vi"/>
-		</Item>
-		<Item Name="controls" Type="Folder" URL="../controls">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="TCP" Type="Folder" URL="../TCP">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
@@ -81,6 +75,12 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Data Logging" Type="Folder" URL="../Data Logging">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="Controls" Type="Folder" URL="../Controls">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="Scratchpads" Type="Folder" URL="../Scratchpads">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
