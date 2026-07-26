@@ -7,7 +7,7 @@ env/
 .venv/
 # Keep your manual tracking exclusion safe
 Lib/
-
+scratchpads/
 # === LabVIEW Local User & Build Files ===
 # Local project aliases (contains machine-specific IP/target mappings)
 *.aliases
