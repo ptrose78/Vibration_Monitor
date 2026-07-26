@@ -147,21 +147,6 @@
         </Generic>
       </Probes>
     </VI>
-    <VI name="DB Message Loop.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-          <SignalUID value="2608"/>
-          <SignalUID value="2611"/>
-          <SignalUID value="1386"/>
-        </Generic>
-      </Probes>
-    </VI>
     <VI name="Data Logging Message Loop.vi">
       <Breakpoints>
         <NodeIndexes>
@@ -185,6 +170,37 @@
         </Generic>
       </Probes>
     </VI>
+    <VI name="Database.lvlib:DB Message Loop.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="2608"/>
+          <SignalUID value="2611"/>
+          <SignalUID value="1386"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Database.lvlib:Write System Error To DB.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1268"/>
+          <SignalUID value="1175"/>
+          <SignalUID value="1642"/>
+          <SignalUID value="1302"/>
+        </Generic>
+      </Probes>
+    </VI>
     <VI name="Error Handler - Message Handling Loop.vi">
       <Breakpoints>
         <NodeIndexes>
@@ -197,28 +213,6 @@
           <SignalUID value="950"/>
           <SignalUID value="228"/>
           <SignalUID value="955"/>
-        </Generic>
-      </Probes>
-    </VI>
-    <VI name="Get Telemetry Data.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-          <SignalUID value="310"/>
-          <SignalUID value="108"/>
-          <SignalUID value="313"/>
-          <SignalUID value="316"/>
-          <SignalUID value="344"/>
-          <SignalUID value="325"/>
-          <SignalUID value="1724"/>
-          <SignalUID value="350"/>
-          <SignalUID value="353"/>
-          <SignalUID value="688"/>
         </Generic>
       </Probes>
     </VI>
@@ -288,7 +282,29 @@
         </Generic>
       </Probes>
     </VI>
-    <VI name="TCP Message Loop.vi">
+    <VI name="TCP.lvlib:Get Telemetry Data.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="310"/>
+          <SignalUID value="108"/>
+          <SignalUID value="313"/>
+          <SignalUID value="316"/>
+          <SignalUID value="344"/>
+          <SignalUID value="325"/>
+          <SignalUID value="1724"/>
+          <SignalUID value="350"/>
+          <SignalUID value="353"/>
+          <SignalUID value="688"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="TCP.lvlib:TCP Message Loop.vi">
       <Breakpoints>
         <NodeIndexes>
         </NodeIndexes>
@@ -335,22 +351,6 @@
       <Probes>
         <Generic>
           <SignalUID value="1244"/>
-        </Generic>
-      </Probes>
-    </VI>
-    <VI name="Write System Error To DB.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-          <SignalUID value="1268"/>
-          <SignalUID value="1175"/>
-          <SignalUID value="1642"/>
-          <SignalUID value="1302"/>
         </Generic>
       </Probes>
     </VI>

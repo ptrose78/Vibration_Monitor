@@ -56,18 +56,13 @@
 			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Message Queue.lvlib" Type="Library" URL="../support/Message Queue/Message Queue.lvlib"/>
 			<Item Name="User Event - Stop.lvlib" Type="Library" URL="../support/User Event - Stop/User Event - Stop.lvlib"/>
-			<Item Name="Check Loop Error.vi" Type="VI" URL="../support/Check Loop Error.vi"/>
-			<Item Name="LoadApplicationConfig.vi" Type="VI" URL="../support/LoadApplicationConfig.vi"/>
-			<Item Name="Error Handler - Event Handling Loop.vi" Type="VI" URL="../support/Error Handler - Event Handling Loop.vi"/>
+			<Item Name="Check Loop Error.vi" Type="VI" URL="../Support/Check Loop Error.vi"/>
+			<Item Name="LoadApplicationConfig.vi" Type="VI" URL="../Support/LoadApplicationConfig.vi"/>
+			<Item Name="Error Handler - Event Handling Loop.vi" Type="VI" URL="../Support/Error Handler - Event Handling Loop.vi"/>
 			<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../support/Store_Listener_Ref.vi"/>
-			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../support/Error Handler - Message Handling Loop.vi"/>
+			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../Support/Error Handler - Message Handling Loop.vi"/>
 		</Item>
-		<Item Name="TCP" Type="Folder" URL="../TCP">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
-		<Item Name="Database" Type="Folder" URL="../Database">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
+		<Item Name="Database" Type="Folder"/>
 		<Item Name="Lib" Type="Folder" URL="../Lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
@@ -83,7 +78,14 @@
 		<Item Name="Scratchpads" Type="Folder" URL="../Scratchpads">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="Assets" Type="Folder">
+			<Item Name="init_db.py" Type="Document" URL="../Database/init_db.py"/>
+			<Item Name="schema.sql" Type="Document" URL="../Database/schema.sql"/>
+			<Item Name="vibration_data.db" Type="Document" URL="../Database/vibration_data.db"/>
+		</Item>
 		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
+		<Item Name="TCP.lvlib" Type="Library" URL="../TCP/TCP.lvlib"/>
+		<Item Name="Database.lvlib" Type="Library" URL="../Database/Database.lvlib"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
 		<Item Name="Acquisition Metrics.ctl" Type="VI" URL="../Acquisition/Acquisition Metrics.ctl"/>
