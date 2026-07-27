@@ -79,6 +79,7 @@
 		<Item Name="Scratchpads" Type="Folder" URL="../Scratchpads">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
+		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
 		<Item Name="Data Logging.lvlib" Type="Library" URL="../Data Logging/Data Logging.lvlib"/>
 		<Item Name="TCP.lvlib" Type="Library" URL="../TCP/TCP.lvlib"/>
 		<Item Name="Database.lvlib" Type="Library" URL="../Database/Database.lvlib"/>
@@ -280,7 +281,6 @@
 			<Property Name="SampTimingType" Type="Str">Sample Clock</Property>
 		</Item>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
-		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
