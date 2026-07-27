@@ -8,25 +8,29 @@
 </Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.SortType" Type="Int">3</Property>
-	<Item Name="support" Type="Folder">
-		<Item Name="Acquisition State.ctl" Type="VI" URL="../Acquisition State.ctl"/>
-		<Item Name="Hardware Configuration.ctl" Type="VI" URL="../Hardware Configuration.ctl"/>
-		<Item Name="Signal Type.ctl" Type="VI" URL="../Signal Type.ctl"/>
+	<Item Name="Controls" Type="Folder">
+		<Item Name="Acquisition State.ctl" Type="VI" URL="../Controls/Acquisition State.ctl"/>
+		<Item Name="Hardware Configuration.ctl" Type="VI" URL="../Controls/Hardware Configuration.ctl"/>
+		<Item Name="Acquisition Metrics.ctl" Type="VI" URL="../Controls/Acquisition Metrics.ctl"/>
+		<Item Name="Alarms.ctl" Type="VI" URL="../Controls/Alarms.ctl"/>
+		<Item Name="Signal Type.ctl" Type="VI" URL="../Controls/Signal Type.ctl"/>
+	</Item>
+	<Item Name="SubVIs" Type="Folder">
+		<Item Name="Determine Condition.vi" Type="VI" URL="../SubVIs/Determine Condition.vi"/>
+		<Item Name="Find RMS Velocity in_s .vi" Type="VI" URL="../SubVIs/Find RMS Velocity in_s .vi"/>
+		<Item Name="Configure Hardware.vi" Type="VI" URL="../SubVIs/Configure Hardware.vi"/>
+		<Item Name="Check Trip Relay Task.vi" Type="VI" URL="../SubVIs/Check Trip Relay Task.vi"/>
+		<Item Name="Generate Simulated Data v2.0.vi" Type="VI" URL="../SubVIs/Generate Simulated Data v2.0.vi"/>
+		<Item Name="Generate Simulated Data.vi" Type="VI" URL="../SubVIs/Generate Simulated Data.vi"/>
+		<Item Name="Get Alarm Status.vi" Type="VI" URL="../SubVIs/Get Alarm Status.vi"/>
+		<Item Name="Get Number of Channels.vi" Type="VI" URL="../SubVIs/Get Number of Channels.vi"/>
+		<Item Name="Get System Settings.vi" Type="VI" URL="../SubVIs/Get System Settings.vi"/>
+		<Item Name="Get Task Name.vi" Type="VI" URL="../SubVIs/Get Task Name.vi"/>
+		<Item Name="Get Vibration Profile.vi" Type="VI" URL="../SubVIs/Get Vibration Profile.vi"/>
+		<Item Name="Initialize Hardware References.vi" Type="VI" URL="../SubVIs/Initialize Hardware References.vi"/>
+		<Item Name="Stop Acquisition.vi" Type="VI" URL="../SubVIs/Stop Acquisition.vi"/>
 	</Item>
 	<Item Name="Acquisition Message Loop.vi" Type="VI" URL="../Acquisition Message Loop.vi"/>
 	<Item Name="Acquire.vi" Type="VI" URL="../Acquire.vi"/>
-	<Item Name="Configure Hardware.vi" Type="VI" URL="../Configure Hardware.vi"/>
-	<Item Name="Generate Simulated Data.vi" Type="VI" URL="../Generate Simulated Data.vi"/>
-	<Item Name="Initialize Hardware References.vi" Type="VI" URL="../Initialize Hardware References.vi"/>
-	<Item Name="Stop Acquisition.vi" Type="VI" URL="../Stop Acquisition.vi"/>
 	<Item Name="Error Handler - Acquisition Message Loop.vi" Type="VI" URL="../Error Handler - Acquisition Message Loop.vi"/>
-	<Item Name="Get Task Name.vi" Type="VI" URL="../Get Task Name.vi"/>
-	<Item Name="Get Vibration Profile.vi" Type="VI" URL="../Get Vibration Profile.vi"/>
-	<Item Name="Get System Settings.vi" Type="VI" URL="../Get System Settings.vi"/>
-	<Item Name="Determine Condition.vi" Type="VI" URL="../Determine Condition.vi"/>
-	<Item Name="Find RMS Velocity in_s .vi" Type="VI" URL="../Find RMS Velocity in_s .vi"/>
-	<Item Name="Generate Simulated Data v2.0.vi" Type="VI" URL="../Generate Simulated Data v2.0.vi"/>
-	<Item Name="Get Number of Channels.vi" Type="VI" URL="../Get Number of Channels.vi"/>
-	<Item Name="Get Alarm Status.vi" Type="VI" URL="../Get Alarm Status.vi"/>
-	<Item Name="Check Trip Relay Task.vi" Type="VI" URL="../Check Trip Relay Task.vi"/>
 </Library>

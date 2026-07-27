@@ -147,7 +147,7 @@
         </Generic>
       </Probes>
     </VI>
-    <VI name="Data Logging Message Loop.vi">
+    <VI name="Data Logging.lvlib:Data Logging Message Loop.vi">
       <Breakpoints>
         <NodeIndexes>
         </NodeIndexes>

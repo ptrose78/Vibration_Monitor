@@ -23,6 +23,16 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Support" Type="Folder">
+			<Property Name="NI.SortType" Type="Int">3</Property>
+			<Item Name="Message Queue.lvlib" Type="Library" URL="../support/Message Queue/Message Queue.lvlib"/>
+			<Item Name="User Event - Stop.lvlib" Type="Library" URL="../support/User Event - Stop/User Event - Stop.lvlib"/>
+			<Item Name="Check Loop Error.vi" Type="VI" URL="../Support/Check Loop Error.vi"/>
+			<Item Name="LoadApplicationConfig.vi" Type="VI" URL="../Support/LoadApplicationConfig.vi"/>
+			<Item Name="Error Handler - Event Handling Loop.vi" Type="VI" URL="../Support/Error Handler - Event Handling Loop.vi"/>
+			<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../support/Store_Listener_Ref.vi"/>
+			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../Support/Error Handler - Message Handling Loop.vi"/>
+		</Item>
 		<Item Name="Documentation" Type="Folder">
 			<Property Name="NI.SortType" Type="Int">0</Property>
 			<Item Name="loc_access_task_data.png" Type="Document" URL="../documentation/loc_access_task_data.png"/>
@@ -48,28 +58,19 @@
 			<Item Name="noloc_note.png" Type="Document" URL="../documentation/noloc_note.png"/>
 			<Item Name="noloc_tip.png" Type="Document" URL="../documentation/noloc_tip.png"/>
 		</Item>
+		<Item Name="Assets" Type="Folder">
+			<Item Name="init_db.py" Type="Document" URL="../Database/init_db.py"/>
+			<Item Name="schema.sql" Type="Document" URL="../Database/schema.sql"/>
+			<Item Name="vibration_data.db" Type="Document" URL="../Database/vibration_data.db"/>
+		</Item>
 		<Item Name="Python" Type="Folder" URL="../Python">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 			<Property Name="NI.SortType" Type="Int">3</Property>
 		</Item>
-		<Item Name="Support" Type="Folder">
-			<Property Name="NI.SortType" Type="Int">3</Property>
-			<Item Name="Message Queue.lvlib" Type="Library" URL="../support/Message Queue/Message Queue.lvlib"/>
-			<Item Name="User Event - Stop.lvlib" Type="Library" URL="../support/User Event - Stop/User Event - Stop.lvlib"/>
-			<Item Name="Check Loop Error.vi" Type="VI" URL="../Support/Check Loop Error.vi"/>
-			<Item Name="LoadApplicationConfig.vi" Type="VI" URL="../Support/LoadApplicationConfig.vi"/>
-			<Item Name="Error Handler - Event Handling Loop.vi" Type="VI" URL="../Support/Error Handler - Event Handling Loop.vi"/>
-			<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../support/Store_Listener_Ref.vi"/>
-			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../Support/Error Handler - Message Handling Loop.vi"/>
-		</Item>
-		<Item Name="Database" Type="Folder"/>
 		<Item Name="Lib" Type="Folder" URL="../Lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Scripts" Type="Folder" URL="../Scripts">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
-		<Item Name="Data Logging" Type="Folder" URL="../Data Logging">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Controls" Type="Folder" URL="../Controls">
@@ -78,18 +79,11 @@
 		<Item Name="Scratchpads" Type="Folder" URL="../Scratchpads">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Assets" Type="Folder">
-			<Item Name="init_db.py" Type="Document" URL="../Database/init_db.py"/>
-			<Item Name="schema.sql" Type="Document" URL="../Database/schema.sql"/>
-			<Item Name="vibration_data.db" Type="Document" URL="../Database/vibration_data.db"/>
-		</Item>
-		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
+		<Item Name="Data Logging.lvlib" Type="Library" URL="../Data Logging/Data Logging.lvlib"/>
 		<Item Name="TCP.lvlib" Type="Library" URL="../TCP/TCP.lvlib"/>
 		<Item Name="Database.lvlib" Type="Library" URL="../Database/Database.lvlib"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
-		<Item Name="Acquisition Metrics.ctl" Type="VI" URL="../Acquisition/Acquisition Metrics.ctl"/>
-		<Item Name="Alarms.ctl" Type="VI" URL="../Acquisition/Alarms.ctl"/>
 		<Item Name="Local_Multi_Point_Task" Type="NI-DAQmx Task">
 			<Property Name="\0\AI.Accel.dBRef" Type="Str">1</Property>
 			<Property Name="\0\AI.Accel.Sensitivity" Type="Str">100</Property>
@@ -286,6 +280,7 @@
 			<Property Name="SampTimingType" Type="Str">Sample Clock</Property>
 		</Item>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
+		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
