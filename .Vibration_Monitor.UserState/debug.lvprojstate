@@ -259,11 +259,6 @@
           <SignalUID value="7211"/>
           <SignalUID value="8035"/>
           <SignalUID value="4587"/>
-          <SignalUID value="2625"/>
-          <SignalUID value="1940"/>
-          <SignalUID value="2706"/>
-          <SignalUID value="2994"/>
-          <SignalUID value="5024"/>
         </Generic>
       </Probes>
     </VI>
@@ -317,27 +312,14 @@
           <SignalUID value="1036"/>
           <SignalUID value="1048"/>
           <SignalUID value="1060"/>
-          <SignalUID value="367"/>
           <SignalUID value="331"/>
           <SignalUID value="334"/>
-          <SignalUID value="5643"/>
-          <SignalUID value="5021"/>
-          <SignalUID value="5729"/>
-          <SignalUID value="5044"/>
           <SignalUID value="4515"/>
-          <SignalUID value="4861"/>
-          <SignalUID value="2746"/>
-          <SignalUID value="4953"/>
-          <SignalUID value="5927"/>
-          <SignalUID value="4328"/>
-          <SignalUID value="2759"/>
-          <SignalUID value="1151"/>
-          <SignalUID value="5353"/>
-          <SignalUID value="6527"/>
-          <SignalUID value="6535"/>
-          <SignalUID value="6988"/>
-          <SignalUID value="6747"/>
-          <SignalUID value="6436"/>
+          <SignalUID value="5044"/>
+          <SignalUID value="5676"/>
+          <SignalUID value="5138"/>
+          <SignalUID value="5533"/>
+          <SignalUID value="3167"/>
         </Generic>
       </Probes>
     </VI>

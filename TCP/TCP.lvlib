@@ -5,6 +5,8 @@
 	<Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Item Name="Get Telemetry Data.vi" Type="VI" URL="../Get Telemetry Data.vi"/>
+	<Item Name="Set Comm Link.vi" Type="VI" URL="../Set Comm Link.vi"/>
 	<Item Name="TCP Message Loop.vi" Type="VI" URL="../TCP Message Loop.vi"/>
 	<Item Name="TCP State Data.ctl" Type="VI" URL="../TCP State Data.ctl"/>
+	<Item Name="Update Comm Link.vi" Type="VI" URL="../Update Comm Link.vi"/>
 </Library>
