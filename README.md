@@ -54,7 +54,7 @@ The system segregates data acquisition, digital signal processing, local user in
 ```
 ## 🔑 Key Features
 
-* **High-Speed Multi-Channel Data Acquisition:** Processes multi-channel accelerometer signals at 25.6 kHz sampling rates with 1 Hz frequency resolution for real-time FFT spectrum analysis.
+* **Configurable Multi-Channel Data Acquisition:** Processes multi-channel accelerometer signals via DAQmx tasks configured dynamically via `config.ini` (e.g., $2000.0\text{ Hz}$ sampling baseline up to $51.2\text{ kHz}$ hardware maximums) with fine frequency resolution for real-time spectral analysis.
 * **Non-Blocking Coprocessor Communication:** Asynchronous TCP client communicating via structured binary headers and JSON payloads with an external Python diagnostic server (`127.0.0.1:12345`).
 * **Resilient SQLite Telemetry Engine:** Optimized database engine with parameterized string escaping and batched transaction commits to eliminate disk I/O bottlenecks during sub-second logging updates.
 * **Latching Error Filtering & Network Recovery:** Edge-triggered state-latching suppresses error flooding during network disconnects while automatically purging socket queue backlogs upon reconnection.
@@ -280,11 +280,11 @@ Before running the Vibration Monitoring System, ensure the following software de
 ### Hardware & Software Requirements
 
 | Component | Requirement |
-|---|---|
-| LabVIEW | National Instruments **LabVIEW 2020+ (64-bit)** |
-| DAQ Driver | **NI DAQmx Driver Package** |
-| Python | **Python 3.8+** |
-| Python Libraries | `numpy` |
+| :--- | :--- |
+| **LabVIEW** | National Instruments LabVIEW 2026 Q1 (32-bit) *(Back-savable to 2020+ via File → Save for Previous Version)* |
+| **DAQ Driver** | NI DAQmx Driver Package |
+| **Python** | Python 3.8+ |
+| **Python Libraries** | `numpy` |
 
 ### Install Python Dependencies
 
