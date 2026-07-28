@@ -232,3 +232,110 @@ Example:
 ```
 
 This protocol enables deterministic, low-latency communication between the LabVIEW real-time acquisition layer and the Python-based diagnostic analysis engine while preserving channel synchronization and frame integrity.
+
+## 🗄️ Database Schema (SQLite)
+
+Telemetry metrics and network error logs are written into `vibration_data.db` using two decoupled operational tables:
+
+```sql
+-- Telemetry Data Table
+CREATE TABLE IF NOT EXISTS telemetry (
+    entry_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    asset_id INTEGER NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    peak_frequency REAL NOT NULL,
+    rms_acceleration REAL NOT NULL,
+    health_score REAL NOT NULL,
+    channel_id INTEGER NOT NULL,
+    frame_id INTEGER NOT NULL
+);
+
+-- System Error & Event Log Table
+CREATE TABLE IF NOT EXISTS system_errors (
+    error_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    source_loop TEXT NOT NULL,
+    error_code INTEGER NOT NULL,
+    description TEXT NOT NULL
+);
+```
+
+# 🚀 Getting Started & Execution
+
+## 1. Prerequisites
+
+Before running the Vibration Monitoring System, ensure the following software dependencies are installed:
+
+### Hardware & Software Requirements
+
+| Component | Requirement |
+|---|---|
+| LabVIEW | National Instruments **LabVIEW 2020+ (64-bit)** |
+| DAQ Driver | **NI DAQmx Driver Package** |
+| Python | **Python 3.8+** |
+| Python Libraries | `numpy` |
+
+### Install Python Dependencies
+
+Install the required Python packages using `pip`:
+
+```bash
+pip install numpy
+```
+## 2. Running the Coprocessor & System
+
+The Vibration Monitoring System consists of two primary components:
+
+| Component | Description |
+|---|---|
+| **Python Diagnostic Coprocessor** | Performs vibration analysis, frequency-domain processing, and generates diagnostic health metrics. |
+| **LabVIEW Master Application** | Handles sensor data acquisition, visualization, TCP communication management, and system control. |
+
+---
+
+## Step 1 — Start the Python Diagnostic Server
+
+Open a terminal window and navigate to the Python application directory:
+
+```bash
+cd Python
+```
+## Launch the Diagnostic Server
+
+Start the Python Diagnostic Coprocessor from the terminal:
+
+```bash
+python test_handshake.py
+```
+
+A successful startup should display:
+```
+Starting Diagnostic Coprocessor Server on 127.0.0.1:12345...
+Awaiting connection from LabVIEW Simulation Engine...
+```
+The Python Diagnostic Coprocessor is now running and ready to accept TCP connections from the LabVIEW application.
+
+## Step 2 — Launch the LabVIEW Master Application
+
+### Open the LabVIEW project file:
+```
+Vibration_Monitor.lvproj
+```
+
+### Open the Main Application VI
+Launch the primary application VI:
+```
+Main.vi
+```
+
+### Start Execution
+
+Begin system execution by clicking the Run arrow in LabVIEW.
+Observe the blue Comms/Python Link status indicator illuminate, verifying active bi-directional communication.
+
+The system is now ready for real-time vibration acquisition, diagnostic analysis, and telemetry monitoring.
+
+
+
+
+
