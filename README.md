@@ -14,7 +14,7 @@ The system segregates data acquisition, digital signal processing, local user in
                ┌──────────────────────────────────────────────┐
                │         NI DAQmx / Hardware Acquisition       │
                └──────────────────────┬───────────────────────┘
-                                      │ (25.6 kHz / Multi-Channel)
+                                      │ (2000 Hz / Multi-Channel)
                                       ▼
                ┌──────────────────────────────────────────────┐
                │           Acquisition Message Loop           │
