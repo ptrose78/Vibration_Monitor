@@ -84,3 +84,151 @@ The repository is modularized using library-first encapsulation to prevent works
 * **`Main.vi`:** The top-level application executable that launches and orchestrates all decoupled parallel loops.
 * **`Vibration_Monitor.lvproj`:** The master LabVIEW project environment file that maps and tracks all physical dependencies.
 * **`.gitignore` / `.Vibration_Monitor.UserState`:** Git and LabVIEW environment tracking files ensuring local IDE states and compiled object caches remain untracked.
+
+---
+
+## 🔬 Signal Processing & Diagnostic Mechanics
+
+### 1. Spectral Scaling & Windowing
+
+To convert raw discrete time-domain signals $x[n]$ into physical spectral units, the system applies the following processing steps:
+
+**Windowing:** A Hanning window is applied in the time domain to suppress spectral leakage caused by non-integer period truncation:
+
+$$
+w[n] = 0.5 - 0.5 \cos\left(\frac{2\pi n}{N-1}\right)
+$$
+
+**Auto Power Spectrum:** `Auto Power Spectrum.vi` converts time-domain arrays into single-sided power-spectrum magnitude arrays in $\text{V}^2\text{ RMS}$ or $g^2\text{ RMS}$.
+
+**Linear Peak Acceleration Conversion:** Power-spectrum output arrays are converted to Peak Acceleration ($g\text{ Peak}$) so spectral harmonic heights align directly with time-domain waveform peaks:
+
+$$
+Peak Acceleration (g) = √(Power Spectrum Output) × √2
+$$
+
+### 2. Time-Domain Velocity Integration
+
+To evaluate machine severity against standard vibration criteria, acceleration signals in $g$ are digitally integrated using trapezoidal numerical summation and converted to **RMS Velocity** $\text{(in/s)}$:
+
+$$v_{\text{RMS}} = \sqrt{\frac{1}{N} \sum_{k=1}^{N} \left( 386.088 \times \int a(t)dt \right)^2}$$
+
+---
+
+## 📡 Network Protocol & Payload Specifications
+
+Communication between the **LabVIEW TCP Message Loop** and the **Python Diagnostic Coprocessor** uses a **4-byte Big-Endian Length-Prefixed Frame Structure**:
+
+
+### Frame Structure
+
+| Component | Size | Description |
+|---|---:|---|
+| Header | 4 bytes | Unsigned 32-bit integer (`UInt32`) containing the payload length |
+| Byte Order | Big-Endian | Most significant byte transmitted first |
+| Payload | Variable | UTF-8 encoded JSON diagnostic message |
+| Payload Length | `N` bytes | Number of bytes contained in the JSON payload |
+
+### Client TX Payload (LabVIEW → Python)
+
+The LabVIEW TCP Message Loop sends vibration waveform data to the Python Diagnostic Coprocessor for analysis.
+
+```json
+{
+  "sample_rate": 2000.0,
+  "matrix": [
+    [0.12, 0.25, -0.18, 0.04, "..."],
+    [0.05, 0.08, -0.02, 0.01, "..."]
+  ]
+}
+```
+### Payload Fields
+| Field         | Type            | Description                              |
+| ------------- | --------------- | ---------------------------------------- |
+| `sample_rate` | Float           | Acquisition sample rate in Hz            |
+| `matrix`      | Array of Arrays | Multi-channel vibration waveform samples |
+| `matrix[0]`   | Array           | Channel 1 vibration data (Motor NDE)     |
+| `matrix[1]`   | Array           | Channel 2 vibration data (Motor DE)      |
+
+
+### Server RX Payload (Python → LabVIEW)
+
+The Python Diagnostic Coprocessor returns processed vibration diagnostics and machine health metrics.
+```json
+{
+  "asset_id": 1,
+  "frame_id": 406,
+  "channels": [
+    {
+      "channel_id": 1,
+      "peak_frequency": 44.92,
+      "rms_acceleration": 0.16,
+      "health_score": 99.7
+    },
+    {
+      "channel_id": 2,
+      "peak_frequency": 44.92,
+      "rms_acceleration": 0.35,
+      "health_score": 58.2
+    }
+  ]
+}
+```
+### Response Fields
+| Field              | Type    | Description                                               |
+| ------------------ | ------- | --------------------------------------------------------- |
+| `asset_id`         | Integer | Unique identifier for the monitored machine or asset      |
+| `frame_id`         | Integer | Sequential identifier for the analyzed data frame         |
+| `channels`         | Array   | Diagnostic results for each vibration channel             |
+| `channel_id`       | Integer | Channel identifier matching the transmitted waveform data |
+| `peak_frequency`   | Float   | Dominant vibration frequency detected (Hz)                |
+| `rms_acceleration` | Float   | RMS acceleration level from vibration analysis            |
+| `health_score`     | Float   | Computed equipment health indicator (0–100 scale)         |
+
+### Example End-to-End Transaction:
+### 1. LabVIEW Sends Vibration Data
+```
+   [4-byte payload length]
+        +
+[UTF-8 JSON waveform matrix]
+```
+
+Example:
+```
+Header:
+[00 00 01 F4]
+
+Payload:
+{
+  "sample_rate": 2000.0,
+  "matrix": [
+    [0.12, 0.25, -0.18, 0.04],
+    [0.05, 0.08, -0.02, 0.01]
+  ]
+}
+```
+
+### 2. Python Returns Diagnostic Results
+```
+   [4-byte payload length]
+        +
+[UTF-8 JSON diagnostic response]
+```
+
+Example:
+```
+{
+  "asset_id": 1,
+  "frame_id": 406,
+  "channels": [
+    {
+      "channel_id": 1,
+      "peak_frequency": 44.92,
+      "rms_acceleration": 0.16,
+      "health_score": 99.7
+    }
+  ]
+}
+```
+
+This protocol enables deterministic, low-latency communication between the LabVIEW real-time acquisition layer and the Python-based diagnostic analysis engine while preserving channel synchronization and frame integrity.
