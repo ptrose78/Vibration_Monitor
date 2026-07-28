@@ -273,9 +273,9 @@ CREATE TABLE IF NOT EXISTS system_errors (
 
 # 🚀 Getting Started & Execution
 
-## 1. Prerequisites
+## 1. Prerequisites & Dependencies
 
-Before running the Vibration Monitoring System, ensure the following software dependencies are installed:
+Before running the Vibration Monitoring System, ensure all hardware and software dependencies are installed.
 
 ### Hardware & Software Requirements
 
@@ -286,7 +286,7 @@ Before running the Vibration Monitoring System, ensure the following software de
 | **Python** | Python 3.8+ |
 | **Python Libraries** | `numpy` |
 
-### Install Python Dependencies
+### Python Package Installation
 
 Install the required Python packages using `pip`:
 
@@ -304,45 +304,33 @@ The Vibration Monitoring System consists of two primary components:
 
 ---
 
-## Step 1 — Start the Python Diagnostic Server
+### Step 1 — Start the Python Diagnostic Server
 
 Open a terminal window and navigate to the Python application directory:
 
 ```bash
 cd Python
 ```
-## Launch the Diagnostic Server
+### Launch the Diagnostic Server
 
 Start the Python Diagnostic Coprocessor from the terminal:
 
 ```bash
-python test_handshake.py
+python coprocessor.py
 ```
 
 A successful startup should display:
-```
+```text
 Starting Diagnostic Coprocessor Server on 127.0.0.1:12345...
 Awaiting connection from LabVIEW Simulation Engine...
 ```
 The Python Diagnostic Coprocessor is now running and ready to accept TCP connections from the LabVIEW application.
 
-## Step 2 — Launch the LabVIEW Master Application
+### Step 2 — Launch the LabVIEW Master Application
 
-### Open the LabVIEW project file:
-```
-Vibration_Monitor.lvproj
-```
-
-### Open the Main Application VI
-Launch the primary application VI:
-```
-Main.vi
-```
-
-### Start Execution
-
-Begin system execution by clicking the Run arrow in LabVIEW.
-Observe the blue Comms/Python Link status indicator illuminate, verifying active bi-directional communication.
+1. **Open the Project:** Open `Vibration_Monitor.lvproj` in LabVIEW.
+2. **Launch the Master VI:** Open `Main.vi` and click the **Run** arrow.
+3. **Verify Connection:** Observe the blue `Comms/Python Link` status indicator illuminate, confirming active TCP communication.
 
 The system is now ready for real-time vibration acquisition, diagnostic analysis, and telemetry monitoring.
 
