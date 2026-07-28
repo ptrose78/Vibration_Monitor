@@ -281,6 +281,9 @@
 			<Property Name="SampTimingType" Type="Str">Sample Clock</Property>
 		</Item>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
+		<Item Name="Frequency Type.ctl" Type="VI" URL="../Acquisition/Controls/Frequency Type.ctl"/>
+		<Item Name="Machine Speed.ctl" Type="VI" URL="../Acquisition/Controls/Machine Speed.ctl"/>
+		<Item Name="Direction.ctl" Type="VI" URL="../Acquisition/Controls/Direction.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">

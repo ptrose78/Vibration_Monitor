@@ -30,9 +30,11 @@
 		<Item Name="Initialize Hardware References.vi" Type="VI" URL="../SubVIs/Initialize Hardware References.vi"/>
 		<Item Name="Stop Acquisition.vi" Type="VI" URL="../SubVIs/Stop Acquisition.vi"/>
 		<Item Name="Calc t_0.vi" Type="VI" URL="../SubVIs/Calc t_0.vi"/>
+		<Item Name="Calc Frequencies.vi" Type="VI" URL="../SubVIs/Calc Frequencies.vi"/>
 	</Item>
 	<Item Name="Acquisition Message Loop.vi" Type="VI" URL="../Acquisition Message Loop.vi"/>
 	<Item Name="Acquire.vi" Type="VI" URL="../Acquire.vi"/>
 	<Item Name="Error Handler - Acquisition Message Loop.vi" Type="VI" URL="../Error Handler - Acquisition Message Loop.vi"/>
 	<Item Name="Generate Waveforms.vi" Type="VI" URL="../SubVIs/Generate Waveforms.vi"/>
+	<Item Name="RPM Simulator.vi" Type="VI" URL="../SubVIs/RPM Simulator.vi"/>
 </Library>

@@ -15,18 +15,6 @@
         </Generic>
       </Probes>
     </VI>
-    <VI name="Acquisition.lvlib:Acquisition Message Loop.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-        </Generic>
-      </Probes>
-    </VI>
     <VI name="Acquisition.lvlib:Configure Hardware.vi">
       <Breakpoints>
         <NodeIndexes>
@@ -38,37 +26,6 @@
         <Generic>
           <SignalUID value="1753"/>
           <SignalUID value="1769"/>
-        </Generic>
-      </Probes>
-    </VI>
-    <VI name="Acquisition.lvlib:Determine Condition.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-          <SignalUID value="1771"/>
-          <SignalUID value="1184"/>
-          <SignalUID value="1231"/>
-          <SignalUID value="307"/>
-          <SignalUID value="424"/>
-        </Generic>
-      </Probes>
-    </VI>
-    <VI name="Acquisition.lvlib:Get Alarm Status.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-          <SignalUID value="1111"/>
-          <SignalUID value="788"/>
         </Generic>
       </Probes>
     </VI>
