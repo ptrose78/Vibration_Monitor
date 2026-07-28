@@ -284,6 +284,15 @@
 		<Item Name="Frequency Type.ctl" Type="VI" URL="../Acquisition/Controls/Frequency Type.ctl"/>
 		<Item Name="Machine Speed.ctl" Type="VI" URL="../Acquisition/Controls/Machine Speed.ctl"/>
 		<Item Name="Direction.ctl" Type="VI" URL="../Acquisition/Controls/Direction.ctl"/>
+		<Item Name="Local_Trip_Relay_Task" Type="NI-DAQmx Task">
+			<Property Name="\0\ChanType" Type="Str">Digital Output</Property>
+			<Property Name="\0\DO.InvertLines" Type="Str">0</Property>
+			<Property Name="\0\Name" Type="Str">Local_Trip_Relay_Task/DigitalOut</Property>
+			<Property Name="\0\PhysicalChanName" Type="Str">cDAQ2Mod2/port0/line0</Property>
+			<Property Name="Channels" Type="Str">Local_Trip_Relay_Task/DigitalOut</Property>
+			<Property Name="Name" Type="Str">Local_Trip_Relay_Task</Property>
+			<Property Name="SampTimingType" Type="Str">On Demand</Property>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">

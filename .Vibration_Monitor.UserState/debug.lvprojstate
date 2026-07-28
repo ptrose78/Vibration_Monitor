@@ -12,6 +12,8 @@
         <Generic>
           <SignalUID value="1950"/>
           <SignalUID value="2688"/>
+          <SignalUID value="2460"/>
+          <SignalUID value="2815"/>
         </Generic>
       </Probes>
     </VI>
@@ -26,6 +28,54 @@
         <Generic>
           <SignalUID value="1753"/>
           <SignalUID value="1769"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Acquisition.lvlib:Generate Waveforms.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="301"/>
+          <SignalUID value="2237"/>
+          <SignalUID value="231"/>
+          <SignalUID value="264"/>
+          <SignalUID value="249"/>
+          <SignalUID value="225"/>
+          <SignalUID value="1172"/>
+          <SignalUID value="255"/>
+          <SignalUID value="2701"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Acquisition.lvlib:Get Alarm Status.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="788"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Acquisition.lvlib:RPM Simulator.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="988"/>
+          <SignalUID value="2309"/>
         </Generic>
       </Probes>
     </VI>
@@ -254,11 +304,7 @@
           <SignalUID value="331"/>
           <SignalUID value="334"/>
           <SignalUID value="4515"/>
-          <SignalUID value="5044"/>
-          <SignalUID value="5676"/>
-          <SignalUID value="5138"/>
           <SignalUID value="5533"/>
-          <SignalUID value="3167"/>
         </Generic>
       </Probes>
     </VI>
