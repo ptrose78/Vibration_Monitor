@@ -11,35 +11,46 @@ Designed for high-speed vibration acquisition, real-time spectral feature extrac
 The system segregates data acquisition, digital signal processing, local user interface rendering, external network coprocessing, and persistent data logging into decoupled parallel loops to protect hardware timing from software latency.
 
 ```text
-               ┌──────────────────────────────────────────────┐
-               │         NI DAQmx / Hardware Acquisition       │
-               └──────────────────────┬───────────────────────┘
-                                      │ (2000 Hz / Multi-Channel)
-                                      ▼
-               ┌──────────────────────────────────────────────┐
-               │           Acquisition Message Loop           │
-               └─────────┬──────────────────────────┬─────────┘
-                         │                          │
-   (Raw Data / Waveforms)│                          │(1 Hz FFT / Feature Extracted)
-                         ▼                          ▼
-   ┌──────────────────────────┐        ┌──────────────────────────┐
-   │    Graph / UI Loop       │        │     TCP Message Loop     │
-   │  (Decimated Rendering)   │        │   (Non-Blocking Client)  │
-   └──────────────────────────┘        └────────────┬─────────────┘
-                                                    │
-                                                    │ (TCP / Port 12345)
-                                                    ▼
-                                       ┌──────────────────────────┐
-                                       │ Python Diagnostics Engine│
-                                       │ (JSON Health Metrics)    │
-                                       └────────────┬─────────────┘
-                                                    │
-                                                    │ (Telemetry & Fault Payload)
-                                                    ▼
-                                       ┌──────────────────────────┐
-                                       │   Database Message Loop  │
-                                       │ (Batched SQLite Engine)  │
-                                       └──────────────────────────┘
+                               ┌──────────────────────────────────────────────┐
+                               │        NI DAQmx / Hardware Acquisition       │
+                               └──────────────────────┬───────────────────────┘
+                                                      │ (2000 Hz / Multi-Channel)
+                                                      ▼
+                               ┌──────────────────────────────────────────────┐
+                               │           Acquisition Message Loop           │
+                               └────┬─────────────────┬──────────────────┬────┘
+                                    │                 │                  │
+         (Multi-Channel Waveforms)  │                 │                  │ (Multi-Channel Waveforms)
+                                    │                 │ (Multi-Channel   │
+                                    ▼                 │  Waveforms)      ▼
+           ┌──────────────────────────┐               │               ┌──────────────────────────┐
+           │      Graph / UI Loop     │               ▼               │    Data Logging Loop     │
+           │   (Decimated Rendering)  │    ┌────────────────────┐     │   (TDMS Binary Writer)   │
+           └──────────────────────────┘    │  TCP Message Loop  │     └──────────────────────────┘
+                                           │(Non-Block Client)  │
+                                           └──────────┬─────────┘
+                                                      │
+                                                      │ (JSON Payload / Port 12345)
+                                                      ▼
+                                         ┌──────────────────────────┐
+                                         │ Python Diagnostics Engine│
+                                         │  (JSON Health Metrics)   │
+                                         └────────────┬─────────────┘
+                                                      │
+                                                      │ Return Diagnostic Telemetry (JSON)
+                                                      ▼
+                                         ┌──────────────────────────┐
+                                         │     TCP Message Loop     │
+                                         │   (Fan-out Dispatcher)   │
+                                         └──────┬────────────┬──────┘
+                                                │            │
+              Enqueue "Update Telemetry Display"│            │ Enqueue "Log Telemetry"
+                                                │            │
+                                                ▼            ▼
+                                ┌────────────────────┐    ┌──────────────────────────┐
+                                │   Graph / UI Loop  │    │   Database Message Loop  │
+                                │ (Telemetry Display)│    │ (Batched SQLite Engine)  │
+                                └────────────────────┘    └──────────────────────────┘
 ```
 ## 🔑 Key Features
 
