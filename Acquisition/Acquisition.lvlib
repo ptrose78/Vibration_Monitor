@@ -41,4 +41,5 @@
 	<Item Name="Error Handler - Acquisition Message Loop.vi" Type="VI" URL="../Error Handler - Acquisition Message Loop.vi"/>
 	<Item Name="Generate Waveforms.vi" Type="VI" URL="../SubVIs/Generate Waveforms.vi"/>
 	<Item Name="RPM Simulator.vi" Type="VI" URL="../SubVIs/RPM Simulator.vi"/>
+	<Item Name="Get RPM Tast Name.vi" Type="VI" URL="../SubVIs/Get RPM Tast Name.vi"/>
 </Library>
