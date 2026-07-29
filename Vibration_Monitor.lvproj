@@ -290,6 +290,30 @@
 			<Property Name="SampTimingType" Type="Str">On Demand</Property>
 		</Item>
 		<Item Name="README.md" Type="Document" URL="../README.md"/>
+		<Item Name="Local_RPM_Task" Type="NI-DAQmx Task">
+			<Property Name="\0\ChanType" Type="Str">Counter Input</Property>
+			<Property Name="\0\CI.CustomScaleName" Type="Str">Linear Scale</Property>
+			<Property Name="\0\CI.Freq.MeasMeth" Type="Str">Low Frequency with 1 Counter</Property>
+			<Property Name="\0\CI.Freq.StartingEdge" Type="Str">Rising</Property>
+			<Property Name="\0\CI.Freq.Term" Type="Str">/PXI1Slot2_2/PFI9</Property>
+			<Property Name="\0\CI.Freq.Units" Type="Str">From Custom Scale</Property>
+			<Property Name="\0\CI.Max" Type="Str">200</Property>
+			<Property Name="\0\CI.MeasType" Type="Str">Frequency</Property>
+			<Property Name="\0\CI.Min" Type="Str">2</Property>
+			<Property Name="\0\Name" Type="Str">Local_RPM_Task/Frequency</Property>
+			<Property Name="\0\PhysicalChanName" Type="Str">PXI1Slot2_2/ctr0</Property>
+			<Property Name="Channels" Type="Str">Local_RPM_Task/Frequency</Property>
+			<Property Name="Name" Type="Str">Local_RPM_Task</Property>
+			<Property Name="SampQuant.SampPerChan" Type="Str">1</Property>
+		</Item>
+		<Item Name="Linear Scale" Type="NI-DAQmx Scale">
+			<Property Name="Lin.Slope" Type="Str">60</Property>
+			<Property Name="Lin.YIntercept" Type="Str">0</Property>
+			<Property Name="Name" Type="Str">Linear Scale</Property>
+			<Property Name="PreScaledUnits" Type="Str">Hz</Property>
+			<Property Name="ScaledUnits" Type="Str">RPM</Property>
+			<Property Name="ScaleType" Type="Str">Linear</Property>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">
