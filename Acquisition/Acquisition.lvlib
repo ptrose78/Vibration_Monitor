@@ -35,12 +35,12 @@
 		<Item Name="Calc t_0.vi" Type="VI" URL="../SubVIs/Calc t_0.vi"/>
 		<Item Name="Calc Frequencies.vi" Type="VI" URL="../SubVIs/Calc Frequencies.vi"/>
 		<Item Name="Get Relay Task Name.vi" Type="VI" URL="../SubVIs/Get Relay Task Name.vi"/>
+		<Item Name="Generate Waveforms.vi" Type="VI" URL="../SubVIs/Generate Waveforms.vi"/>
+		<Item Name="RPM Simulator.vi" Type="VI" URL="../SubVIs/RPM Simulator.vi"/>
+		<Item Name="Get RPM Tast Name.vi" Type="VI" URL="../SubVIs/Get RPM Tast Name.vi"/>
+		<Item Name="Get RPM.vi" Type="VI" URL="../SubVIs/Get RPM.vi"/>
 	</Item>
 	<Item Name="Acquisition Message Loop.vi" Type="VI" URL="../Acquisition Message Loop.vi"/>
 	<Item Name="Acquire.vi" Type="VI" URL="../Acquire.vi"/>
 	<Item Name="Error Handler - Acquisition Message Loop.vi" Type="VI" URL="../Error Handler - Acquisition Message Loop.vi"/>
-	<Item Name="Generate Waveforms.vi" Type="VI" URL="../SubVIs/Generate Waveforms.vi"/>
-	<Item Name="RPM Simulator.vi" Type="VI" URL="../SubVIs/RPM Simulator.vi"/>
-	<Item Name="Get RPM Tast Name.vi" Type="VI" URL="../SubVIs/Get RPM Tast Name.vi"/>
-	<Item Name="Get RPM.vi" Type="VI" URL="../SubVIs/Get RPM.vi"/>
 </Library>

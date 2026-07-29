@@ -13,7 +13,6 @@
           <SignalUID value="1950"/>
           <SignalUID value="2688"/>
           <SignalUID value="2460"/>
-          <SignalUID value="2815"/>
         </Generic>
       </Probes>
     </VI>
@@ -27,27 +26,6 @@
       <Probes>
         <Generic>
           <SignalUID value="1769"/>
-        </Generic>
-      </Probes>
-    </VI>
-    <VI name="Acquisition.lvlib:Generate Waveforms.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-          <SignalUID value="301"/>
-          <SignalUID value="2237"/>
-          <SignalUID value="231"/>
-          <SignalUID value="264"/>
-          <SignalUID value="249"/>
-          <SignalUID value="225"/>
-          <SignalUID value="1172"/>
-          <SignalUID value="255"/>
-          <SignalUID value="2701"/>
         </Generic>
       </Probes>
     </VI>
@@ -144,16 +122,10 @@
       </Breakpoints>
       <Probes>
         <Generic>
-          <SignalUID value="3242"/>
           <SignalUID value="1766"/>
           <SignalUID value="1778"/>
-          <SignalUID value="137"/>
-          <SignalUID value="400"/>
-          <SignalUID value="123"/>
-          <SignalUID value="1117"/>
           <SignalUID value="500"/>
           <SignalUID value="834"/>
-          <SignalUID value="807"/>
           <SignalUID value="740"/>
         </Generic>
       </Probes>
@@ -262,28 +234,6 @@
           <SignalUID value="1497"/>
           <SignalUID value="1473"/>
           <SignalUID value="1420"/>
-        </Generic>
-      </Probes>
-    </VI>
-    <VI name="TCP.lvlib:Get Telemetry Data.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-          <SignalUID value="310"/>
-          <SignalUID value="108"/>
-          <SignalUID value="313"/>
-          <SignalUID value="316"/>
-          <SignalUID value="344"/>
-          <SignalUID value="325"/>
-          <SignalUID value="1724"/>
-          <SignalUID value="350"/>
-          <SignalUID value="353"/>
-          <SignalUID value="688"/>
         </Generic>
       </Probes>
     </VI>

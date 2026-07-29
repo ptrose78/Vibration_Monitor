@@ -63,6 +63,9 @@ try:
         # Dynamically extract the sample rate (fallback to 2000.0 if key is missing)
         sample_rate = float(raw_payload.get('sample_rate', 2000.0))
         print(f"[DEBUG] Operational Scale -> Active Sample Rate: {sample_rate} Hz")
+
+        acq_metrics = raw_payload.get('acquisition_metrics', {})
+        machine_rpm = float(acq_metrics.get('rpm', 0.0))
         
         # Extract the raw matrix data from its key
         raw_matrix = raw_payload.get('matrix', [])
@@ -112,6 +115,7 @@ try:
         response_payload = {
             "asset_id": TARGET_ASSET_ID,
             "frame_id": iteration,
+            "rpm": round(machine_rpm, 2),
             "channels": channels_telemetry
         }
         
