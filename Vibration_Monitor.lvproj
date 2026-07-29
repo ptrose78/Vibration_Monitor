@@ -314,7 +314,6 @@
 			<Property Name="ScaledUnits" Type="Str">RPM</Property>
 			<Property Name="ScaleType" Type="Str">Linear</Property>
 		</Item>
-		<Item Name="TCP Payload.ctl" Type="VI" URL="../TCP/TCP Payload.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies"/>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="Main Application" Type="EXE">

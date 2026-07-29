@@ -237,6 +237,20 @@
         </Generic>
       </Probes>
     </VI>
+    <VI name="TCP.lvlib:Get Telemetry Data.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="1724"/>
+          <SignalUID value="313"/>
+        </Generic>
+      </Probes>
+    </VI>
     <VI name="TCP.lvlib:TCP Message Loop.vi">
       <Breakpoints>
         <NodeIndexes>
