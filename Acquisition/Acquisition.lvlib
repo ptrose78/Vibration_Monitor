@@ -12,6 +12,9 @@
 		<Item Name="Acquisition State.ctl" Type="VI" URL="../Controls/Acquisition State.ctl"/>
 		<Item Name="Hardware Configuration.ctl" Type="VI" URL="../Controls/Hardware Configuration.ctl"/>
 		<Item Name="Acquisition Metrics.ctl" Type="VI" URL="../Controls/Acquisition Metrics.ctl"/>
+		<Item Name="Frequency Type.ctl" Type="VI" URL="../Controls/Frequency Type.ctl"/>
+		<Item Name="Machine Speed.ctl" Type="VI" URL="../Controls/Machine Speed.ctl"/>
+		<Item Name="Direction.ctl" Type="VI" URL="../Controls/Direction.ctl"/>
 		<Item Name="Alarms.ctl" Type="VI" URL="../Controls/Alarms.ctl"/>
 		<Item Name="Signal Type.ctl" Type="VI" URL="../Controls/Signal Type.ctl"/>
 	</Item>
@@ -25,12 +28,13 @@
 		<Item Name="Get Alarm Status.vi" Type="VI" URL="../SubVIs/Get Alarm Status.vi"/>
 		<Item Name="Get Number of Channels.vi" Type="VI" URL="../SubVIs/Get Number of Channels.vi"/>
 		<Item Name="Get System Settings.vi" Type="VI" URL="../SubVIs/Get System Settings.vi"/>
-		<Item Name="Get Task Name.vi" Type="VI" URL="../SubVIs/Get Task Name.vi"/>
+		<Item Name="Get Vibration Task Name.vi" Type="VI" URL="../SubVIs/Get Vibration Task Name.vi"/>
 		<Item Name="Get Vibration Profile.vi" Type="VI" URL="../SubVIs/Get Vibration Profile.vi"/>
 		<Item Name="Initialize Hardware References.vi" Type="VI" URL="../SubVIs/Initialize Hardware References.vi"/>
 		<Item Name="Stop Acquisition.vi" Type="VI" URL="../SubVIs/Stop Acquisition.vi"/>
 		<Item Name="Calc t_0.vi" Type="VI" URL="../SubVIs/Calc t_0.vi"/>
 		<Item Name="Calc Frequencies.vi" Type="VI" URL="../SubVIs/Calc Frequencies.vi"/>
+		<Item Name="Get Relay Task Name.vi" Type="VI" URL="../SubVIs/Get Relay Task Name.vi"/>
 	</Item>
 	<Item Name="Acquisition Message Loop.vi" Type="VI" URL="../Acquisition Message Loop.vi"/>
 	<Item Name="Acquire.vi" Type="VI" URL="../Acquire.vi"/>
