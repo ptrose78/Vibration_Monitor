@@ -10,12 +10,14 @@ Designed for high-speed vibration acquisition, real-time spectral feature extrac
 * [🛠 Tech Stack & Dependencies](#-tech-stack--dependencies)
 * [📂 Directory Structure](#-directory-structure)
 * [🔬 Signal Processing & Diagnostic Mechanics](#-signal-processing--diagnostic-mechanics)
-  * [1. Spectral Scaling & Windowing](#1-spectral-scaling--windowing)
-  * [2. Time-Domain Velocity Integration](#2-time-domain-velocity-integration)
+  * [1. True RMS Acceleration](#1-true-rms-acceleration)
+  * [2. Fast Fourier Transform (FFT) & Peak Frequency Detection](#2-fast-fourier-transform-fft--peak-frequency-detection)
+  * [3. Equipment Health Scoring Heuristic](#3-equipment-health-scoring-heuristic)
 * [📡 Network Protocol & Payload Specifications](#-network-protocol--payload-specifications)
 * [⚙️ Configuration & Operational Modes](#%EF%B8%8F-configuration--operational-modes)
 * [🗄️ Database Schema (SQLite)](#%EF%B8%8F-database-schema-sqlite)
 * [🚀 Getting Started & Execution](#-getting-started--execution)
+
 ---
 
 ## 📸 System Overview & Architecture
@@ -298,9 +300,9 @@ CREATE TABLE IF NOT EXISTS system_errors (
 
 ## 1. Prerequisites & Dependencies
 
-Before running the Vibration Monitoring System, ensure all hardware and software dependencies are installed.
+Before running the Vibration Monitoring System, ensure all software dependencies are installed.
 
-### Hardware & Software Requirements
+### Software Requirements
 
 | Component | Requirement |
 | :--- | :--- |
@@ -316,6 +318,23 @@ Install the required Python packages using `pip`:
 ```bash
 pip install numpy
 ```
+
+---
+
+### 🔌 Hardware & DAQmx Configuration (Zero Setup Required)
+
+> **Note:** If running in **Simulation Mode** (`Simulation_Mode = True` in `config.ini`), hardware task initialization is completely bypassed!
+
+When deploying in **Hardware Mode** (`Simulation_Mode = False`), the application utilizes **Project-Based NI-DAQmx Tasks** embedded directly inside `Vibration_Monitor.lvproj` under *My Computer*:
+
+* `Local_Multi_Point_Task` — Vibration channel acquisition & IEPE signal conditioning
+* `Local_RPM_Task` — Counter input for tachometer speed tracking (`PFI9`)
+* `Local_Trip_Relay_Task` — Digital output for hardware alarm relay tripping
+
+Because these DAQmx tasks are serialized inside the LabVIEW project file tree, **no manual task creation in NI MAX or configuration file importing is required**. Cloning the repository automatically provisions the required task references upon opening the project in LabVIEW.
+
+---
+
 ## 2. Running the Coprocessor & System
 
 The Vibration Monitoring System consists of two primary components:
@@ -334,7 +353,6 @@ Open a terminal window and navigate to the Python application directory:
 ```bash
 cd Python
 ```
-### Launch the Diagnostic Server
 
 Start the Python Diagnostic Coprocessor from the terminal:
 
@@ -347,7 +365,6 @@ A successful startup should display:
 Starting Diagnostic Coprocessor Server on 127.0.0.1:12345...
 Awaiting connection from LabVIEW Simulation Engine...
 ```
-The Python Diagnostic Coprocessor is now running and ready to accept TCP connections from the LabVIEW application.
 
 ### Step 2 — Launch the LabVIEW Master Application
 

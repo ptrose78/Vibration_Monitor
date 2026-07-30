@@ -83,6 +83,7 @@
 		<Item Name="Data Logging.lvlib" Type="Library" URL="../Data Logging/Data Logging.lvlib"/>
 		<Item Name="TCP.lvlib" Type="Library" URL="../TCP/TCP.lvlib"/>
 		<Item Name="Database.lvlib" Type="Library" URL="../Database/Database.lvlib"/>
+		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="Main.vi" Type="VI" URL="../Main.vi"/>
 		<Item Name="Queued Message Handler Documentation.html" Type="Document" URL="../documentation/Queued Message Handler Documentation.html"/>
 		<Item Name="Local_Multi_Point_Task" Type="NI-DAQmx Task">
@@ -289,7 +290,6 @@
 			<Property Name="Name" Type="Str">Local_Trip_Relay_Task</Property>
 			<Property Name="SampTimingType" Type="Str">On Demand</Property>
 		</Item>
-		<Item Name="README.md" Type="Document" URL="../README.md"/>
 		<Item Name="Local_RPM_Task" Type="NI-DAQmx Task">
 			<Property Name="\0\ChanType" Type="Str">Counter Input</Property>
 			<Property Name="\0\CI.CustomScaleName" Type="Str">Linear Scale</Property>
