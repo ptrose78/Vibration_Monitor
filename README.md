@@ -1,7 +1,7 @@
 <a name="top"></a>
 
 <div align="center">
-  <img src="Documentation/logo.jpg" alt="Vibration Monitor Logo" width="400"/>
+  <img src="Documentation/logo.png" alt="Vibration Monitor Logo" width="150"/>
 </div>
 
 # Vibration Monitor — Continuous Condition Monitoring System
