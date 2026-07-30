@@ -4,6 +4,18 @@ An industrial-grade, multi-threaded condition monitoring system built with a **L
 
 Designed for high-speed vibration acquisition, real-time spectral feature extraction, automated fault detection, and resilient networked diagnostics.
 
+## 📑 Table of Contents
+* [📸 System Overview & Architecture](#-system-overview--architecture)
+* [🔑 Key Features](#-key-features)
+* [🛠 Tech Stack & Dependencies](#-tech-stack--dependencies)
+* [📂 Directory Structure](#-directory-structure)
+* [🔬 Signal Processing & Diagnostic Mechanics](#-signal-processing--diagnostic-mechanics)
+  * [1. Spectral Scaling & Windowing](#1-spectral-scaling--windowing)
+  * [2. Time-Domain Velocity Integration](#2-time-domain-velocity-integration)
+* [📡 Network Protocol & Payload Specifications](#-network-protocol--payload-specifications)
+* [⚙️ Configuration & Operational Modes](#%EF%B8%8F-configuration--operational-modes)
+* [🗄️ Database Schema (SQLite)](#%EF%B8%8F-database-schema-sqlite)
+* [🚀 Getting Started & Execution](#-getting-started--execution)
 ---
 
 ## 📸 System Overview & Architecture
