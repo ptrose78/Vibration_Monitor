@@ -112,29 +112,40 @@ The repository is modularized using library-first encapsulation to prevent works
 
 ## 🔬 Signal Processing & Diagnostic Mechanics
 
-### 1. Spectral Scaling & Windowing
+To offload computational overhead from the LabVIEW user interface loop, all frequency-domain signal processing, feature extraction, and health diagnostics are executed asynchronously within the Python coprocessor using vectorized `numpy` operations.
 
-To convert raw discrete time-domain signals $x[n]$ into physical spectral units, the system applies the following processing steps:
+### 1. True RMS Acceleration
 
-**Windowing:** A Hanning window is applied in the time domain to suppress spectral leakage caused by non-integer period truncation:
+Before spectral transformation, the overall energy content of the raw time-domain signal $x[n]$ across $N$ samples is computed as the True Root Mean Square (RMS) acceleration in $g$:
 
-$$
-w[n] = 0.5 - 0.5 \cos\left(\frac{2\pi n}{N-1}\right)
-$$
+$$a_{\text{RMS}} = \sqrt{\frac{1}{N} \sum_{n=0}^{N-1} x[n]^2}$$
 
-**Auto Power Spectrum:** `Auto Power Spectrum.vi` converts time-domain arrays into single-sided power-spectrum magnitude arrays in $\text{V}^2\text{ RMS}$ or $g^2\text{ RMS}$.
+This metric provides an instantaneous baseline for broadband structural energy and drives the rule-based fault detection engine.
 
-**Linear Peak Acceleration Conversion:** Power-spectrum output arrays are converted to Peak Acceleration ($g\text{ Peak}$) so spectral harmonic heights align directly with time-domain waveform peaks:
+### 2. Fast Fourier Transform (FFT) & Peak Frequency Detection
 
-$$
-Peak Acceleration (g) = √(Power Spectrum Output) × √2
-$$
+To identify discrete dominant harmonic frequencies, the coprocessor converts real-valued discrete time-domain waveforms into the frequency domain using a One-Sided Real Fast Fourier Transform (`np.fft.rfft`):
 
-### 2. Time-Domain Velocity Integration
+$$X[k] = \left| \sum_{n=0}^{N-1} x[n] \cdot e^{-j \frac{2\pi}{N} k n} \right| \quad \text{for } k = 0, 1, \dots, \frac{N}{2}$$
 
-To evaluate machine severity against standard vibration criteria, acceleration signals in $g$ are digitally integrated using trapezoidal numerical summation and converted to **RMS Velocity** $\text{(in/s)}$:
+* **Frequency Resolution ($\Delta f$):** The bin spacing across the frequency axis is determined dynamically from the sampling frequency $f_s$ and sample count $N$:
 
-$$v_{\text{RMS}} = \sqrt{\frac{1}{N} \sum_{k=1}^{N} \left( 386.088 \times \int a(t)dt \right)^2}$$
+$$\Delta f = \frac{f_s}{N}$$
+
+* **Dominant Peak Identification:** The primary defect spectral peak $f_{\text{peak}}$ is extracted by identifying the array index associated with the maximum magnitude bin:
+
+$$f_{\text{peak}} = f_{\text{bins}}\left[ \underset{k}{\text{argmax}}(X[k]) \right]$$
+
+### 3. Equipment Health Scoring Heuristic
+
+The coprocessor evaluates the health score ($0\text{--}100\%$) per channel by applying a piece-wise linear decay function anchored to the operational RMS acceleration threshold ($0.15\text{ g}$ nominal limit):
+
+$$\text{Health Score} = \begin{cases} 
+100.0 - (a_{\text{RMS}} \cdot 33.3), & a_{\text{RMS}} \le 0.15\text{ g} \\ 
+\max\left(0.0, 100.0 - (a_{\text{RMS}} - 0.15) \cdot 400.0\right), & a_{\text{RMS}} > 0.15\text{ g} 
+\end{cases}$$
+
+The resulting health scores, $f_{\text{peak}}$, $\Delta f$, and 4-decimal rounded magnitude vectors are packed into JSON and returned to LabVIEW for display.
 
 ---
 
