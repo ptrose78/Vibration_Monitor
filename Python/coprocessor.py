@@ -82,9 +82,10 @@ try:
         if matrix.ndim == 1:
             matrix = np.expand_dims(matrix, axis=0)
             
-        # 4. Perform live engineering math across ALL available channels
+        ## 4. Perform live engineering math across ALL available channels
         channels_telemetry = []
         TARGET_ASSET_ID = 1  # Standard asset tracking index
+        freq_resolution = 1.0 # Default fallback
         
         for idx, channel_data in enumerate(matrix):
             # Calculate True RMS Acceleration (g RMS)
@@ -95,12 +96,17 @@ try:
             fft_freqs = np.fft.rfftfreq(len(channel_data), d=1.0/sample_rate)
             peak_freq = float(fft_freqs[np.argmax(fft_values)])
             
+            # Calculate the dx (Frequency Resolution) for LabVIEW on the first channel
+            if idx == 0:
+                freq_resolution = float(sample_rate / len(channel_data))
+            
+            # Convert NumPy FFT array to a standard list and round to 4 decimals to save bandwidth
+            fft_magnitudes = np.round(fft_values, 4).tolist()
+            
             # Scaled acceleration threshold for 0.380 g peak simulation range
             if rms_accel > 0.15:
-                # Severe penalty path for acceleration above 0.15 g RMS threshold
                 health_score = max(0.0, 100.0 - ((rms_accel - 0.15) * 400.0))
             else:
-                # Nominal operational wear path
                 health_score = 100.0 - (rms_accel * 33.3)
                 
             # Append channel metrics with exact key alignment for LabVIEW unflattening
@@ -108,7 +114,8 @@ try:
                 "channel_id": idx + 1,
                 "peak_frequency": round(peak_freq, 2),
                 "rms_acceleration": round(rms_accel, 2),
-                "health_score": round(health_score, 1)
+                "health_score": round(health_score, 1),
+                "fft_magnitudes": fft_magnitudes
             })
 
         # 5. Build response payload structure
@@ -116,6 +123,7 @@ try:
             "asset_id": TARGET_ASSET_ID,
             "frame_id": iteration,
             "rpm": round(machine_rpm, 2),
+            "frequency_resolution": round(freq_resolution, 4),
             "channels": channels_telemetry
         }
         

@@ -130,21 +130,6 @@
         </Generic>
       </Probes>
     </VI>
-    <VI name="Database.lvlib:DB Message Loop.vi">
-      <Breakpoints>
-        <NodeIndexes>
-        </NodeIndexes>
-        <SignalIndexes>
-        </SignalIndexes>
-      </Breakpoints>
-      <Probes>
-        <Generic>
-          <SignalUID value="2608"/>
-          <SignalUID value="2611"/>
-          <SignalUID value="1386"/>
-        </Generic>
-      </Probes>
-    </VI>
     <VI name="Database.lvlib:Write System Error To DB.vi">
       <Breakpoints>
         <NodeIndexes>
