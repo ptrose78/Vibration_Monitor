@@ -101,7 +101,7 @@ try:
                 freq_resolution = float(sample_rate / len(channel_data))
             
             # Convert NumPy FFT array to a standard list and round to 4 decimals to save bandwidth
-            fft_magnitudes = np.round(fft_values, 4).tolist()
+            fft_magnitude = np.round(fft_values, 4).tolist()
             
             # Scaled acceleration threshold for 0.380 g peak simulation range
             if rms_accel > 0.15:
@@ -115,7 +115,7 @@ try:
                 "peak_frequency": round(peak_freq, 2),
                 "rms_acceleration": round(rms_accel, 2),
                 "health_score": round(health_score, 1),
-                "fft_magnitudes": fft_magnitudes
+                "fft_magnitude": fft_magnitude
             })
 
         # 5. Build response payload structure

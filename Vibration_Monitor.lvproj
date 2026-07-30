@@ -31,6 +31,7 @@
 			<Item Name="LoadApplicationConfig.vi" Type="VI" URL="../Support/LoadApplicationConfig.vi"/>
 			<Item Name="Error Handler - Event Handling Loop.vi" Type="VI" URL="../Support/Error Handler - Event Handling Loop.vi"/>
 			<Item Name="Store_Listener_Ref.vi" Type="VI" URL="../support/Store_Listener_Ref.vi"/>
+			<Item Name="Create Data Directory.vi" Type="VI" URL="../Support/Create Data Directory.vi"/>
 			<Item Name="Error Handler - Message Handling Loop.vi" Type="VI" URL="../Support/Error Handler - Message Handling Loop.vi"/>
 		</Item>
 		<Item Name="Documentation" Type="Folder">
@@ -78,6 +79,9 @@
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Scratchpads" Type="Folder" URL="../Scratchpads">
+			<Property Name="NI.DISK" Type="Bool">true</Property>
+		</Item>
+		<Item Name="Data" Type="Folder" URL="../Data">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
 		<Item Name="Acquisition.lvlib" Type="Library" URL="../Acquisition/Acquisition.lvlib"/>

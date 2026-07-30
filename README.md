@@ -24,7 +24,9 @@ Designed for high-speed vibration acquisition, real-time spectral feature extrac
   * [2. Fast Fourier Transform (FFT) & Peak Frequency Detection](#2-fast-fourier-transform-fft--peak-frequency-detection)
   * [3. Equipment Health Scoring Heuristic](#3-equipment-health-scoring-heuristic)
 * [📡 Network Protocol & Payload Specifications](#-network-protocol--payload-specifications)
-* [🗄️ Database Schema (SQLite)](#%EF%B8%8F-database-schema-sqlite)
+* [🗄️ Data Persistence & Database Schema](#%EF%B8%8F-data-persistence--database-schema)
+  * [💾 Data Persistence & File Outputs](#-data-persistence--file-outputs)
+  * [🗄️ SQLite Database Schema](#%EF%B8%8F-sqlite-database-schema)
 
 ---
 
@@ -267,8 +269,11 @@ The repository is modularized using library-first encapsulation to prevent works
 
 * **`Acquisition/`:** Contains `Acquisition.lvlib`, hardware configuration TypeDefs, and the primary data collection QMH loops.
 * **`Controls/`:** Stores all globally utilized custom controls and enumerations.
-* **`Data Logging/`:** Manages the modules and `.lvlib` responsible for writing, formatting, and archiving raw high-speed telemetry (e.g., binary TDMS file generation).
-* **`Database/`:** Houses the `.lvlib` responsible for executing SQL schemas to log telemetry and edge diagnostic scores into the local SQLite database.
+* **`Data Logging/`:** Houses `Data Logging.lvlib` and subVIs responsible for formatting and serializing raw high-speed binary streams to TDMS files.
+* **`Database/`:** Houses `Database.lvlib` and subVIs executing SQL schemas to query and log telemetry into SQLite.
+* **`Data/`:** **[Runtime Output Directory]** Stores persistent database and raw binary log files generated during system execution:
+  * `vibration_data.db` — Local SQLite database storing sub-second telemetry and system event logs.
+  * `TDMS_Logs/` — Folder containing timestamps/run-indexed binary TDMS files (`*.tdms` & `*.tdms_index`) for high-speed raw waveform archiving.
 * **`Documentation/`:** Contains project reference materials, architectural diagrams, and supplementary documentation outside of the main README.
 * **`Python/`:** Contains the asynchronous Python scripts used for testing and diagnostics, specifically `engine_scratchpad.py` and `test_handshake.py`.
 * **`Scripts/`:** Contains Python package management tools and environment executables, such as `pip.exe`, `f2py.exe`, and `numpy-config.exe`.
@@ -404,7 +409,16 @@ The Python Diagnostic Coprocessor returns processed vibration diagnostics and ma
 
 ---
 
-## 🗄️ Database Schema (SQLite)
+## 🗄️ Data Persistence & Database Schema
+
+### 💾 Data Persistence & File Outputs
+
+The system automatically generates and manages two types of data artifacts during operation inside the root `Data/` directory:
+
+1. **Relational Telemetry (`Data/vibration_data.db`):** A single, persistent SQLite database containing structured telemetry records and system error logs.
+2. **Raw Waveform Archives (`Data/TDMS_Logs/`):** A new high-speed NI-TDMS binary file (`.tdms`) is instantiated inside `Data/TDMS_Logs/` upon every system execution (`Start` command). This preserves raw multi-channel time-domain waveforms for post-test analysis.
+
+### 🗄️ Database Schema (SQLite)
 
 Telemetry metrics and network error logs are written into `vibration_data.db` using two decoupled operational tables:
 

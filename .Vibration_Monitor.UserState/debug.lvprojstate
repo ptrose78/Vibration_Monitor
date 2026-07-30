@@ -130,6 +130,22 @@
           <SignalUID value="500"/>
           <SignalUID value="834"/>
           <SignalUID value="740"/>
+          <SignalUID value="894"/>
+        </Generic>
+      </Probes>
+    </VI>
+    <VI name="Database.lvlib:DB Message Loop.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="2885"/>
+          <SignalUID value="3075"/>
+          <SignalUID value="2713"/>
         </Generic>
       </Probes>
     </VI>
@@ -210,6 +226,7 @@
           <SignalUID value="6398"/>
           <SignalUID value="6648"/>
           <SignalUID value="8148"/>
+          <SignalUID value="7108"/>
         </Generic>
       </Probes>
     </VI>
