@@ -269,6 +269,77 @@ Example:
 
 This protocol enables deterministic, low-latency communication between the LabVIEW real-time acquisition layer and the Python-based diagnostic analysis engine while preserving channel synchronization and frame integrity.
 
+## ⚙️ Configuration & Operational Modes
+
+System execution, hardware binding, and simulation behaviors are controlled dynamically via the `config.ini` file located in the root directory. This allows operational modes, hardware task names, and acquisition timing parameters to be altered at runtime without recompiling LabVIEW VIs.
+
+### 📄 `config.ini` Structure
+
+```ini
+[Diagnostic_Modes]
+; Determines which operational profile section below is actively parsed
+Selected_Mode = "Multi_Point"
+
+[System_Settings]
+; Global Hardware Bypass Toggle
+; True  = Disconnects NI-DAQmx and executes internal software wave simulation
+; False = Connects directly to physical NI MAX / Project tasks for live data acquisition
+Simulation_Mode = True
+
+; Simulation Engine Fault Vectors (Active when Simulation_Mode = True)
+; 0 = Healthy, 1 = Unbalance Alert, 2 = Bearing Fault Critical, 3 = Sweep Test
+Sim_Profile = "0"
+
+[RPM]
+Task_Name = "Local_RPM_Task"
+Max_Expected_RPM = 6000.0
+Min_Expected_RPM = 60.0
+Terminal_Name = "PFI9"
+
+[Relay]
+Task_Name = "Local_Trip_Relay_Task"
+
+; --- Dynamic Operational Profiles (Selected via Selected_Mode) ---
+[Multi_Point]
+Task_Name = "Local_Multi_Point_Task"
+Sample_Rate_Hz = 2000.0
+Samples_Per_Channel = 2048
+RPM_PPR = 1.0
+
+[Basic_Health]
+Task_Name = "Local_Basic_Health_Task"
+Sample_Rate_Hz = 2000.0
+Samples_Per_Channel = 1024
+RPM_PPR = 1.0
+
+[Complex_Machinery]
+Task_Name = "Local_3_Axis_Analysis_Task"
+Sample_Rate_Hz = 2000.0
+Samples_Per_Channel = 1024
+RPM_PPR = 60.0
+```
+
+---
+
+### 🎛️ Complete Parameter Reference
+
+| Section | Parameter | Accepted Values | Description |
+| :--- | :--- | :--- | :--- |
+| `[Diagnostic_Modes]` | `Selected_Mode` | `"Multi_Point"`, `"Basic_Health"`, `"Complex_Machinery"` | Selects which operational profile section below is actively parsed at runtime. |
+| `[System_Settings]` | `Simulation_Mode` | `"True"`, `"False"` | Toggles between internal software wave generation (`"True"`) and physical DAQ hardware (`"False"`). |
+| `[System_Settings]` | `Sim_Profile` | `"0"`, `"1"`, `"2"`, `"3"` | Injects simulated machinery fault vectors (`"0"` Healthy, `"1"` Unbalance, `"2"` Bearing Fault, `"3"` Sweep). |
+| `[RPM]` | `Task_Name` | *String* | DAQmx counter task reference name embedded in LabVIEW project (`"Local_RPM_Task"`). |
+| `[RPM]` | `Max_Expected_RPM` | *Numeric* | Upper limit threshold for tachometer counter frequency scaling ($6000.0\text{ RPM}$). |
+| `[RPM]` | `Min_Expected_RPM` | *Numeric* | Lower limit threshold for tachometer counter frequency scaling ($60.0\text{ RPM}$). |
+| `[RPM]` | `Terminal_Name` | *String* | Physical DAQ counter input terminal line (`"PFI9"`). |
+| `[Relay]` | `Task_Name` | *String* | DAQmx digital output task reference name for hardware alarm relay tripping (`"Local_Trip_Relay_Task"`). |
+| `[Multi_Point]`<br>`[Basic_Health]`<br>`[Complex_Machinery]` | `Task_Name` | *String* | DAQmx analog input vibration task reference name (`"Local_Multi_Point_Task"`, etc.). |
+| `[Multi_Point]`<br>`[Basic_Health]`<br>`[Complex_Machinery]` | `Sample_Rate_Hz` | *Numeric* | Dynamic sampling frequency ($f_s$) passed directly to `DAQmx Timing.vi`. |
+| `[Multi_Point]`<br>`[Basic_Health]`<br>`[Complex_Machinery]` | `Samples_Per_Channel` | *Numeric* | Buffer size ($N$) acquired per channel during each loop iteration. |
+| `[Multi_Point]`<br>`[Basic_Health]`<br>`[Complex_Machinery]` | `RPM_PPR` | *Numeric* | Pulses Per Revolution (PPR) scalar for tachometer rotational speed conversion. |
+
+---
+
 ## 🗄️ Database Schema (SQLite)
 
 Telemetry metrics and network error logs are written into `vibration_data.db` using two decoupled operational tables:
