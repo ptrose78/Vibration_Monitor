@@ -55,6 +55,7 @@
 			<Item Name="loc_stop_task.png" Type="Document" URL="../documentation/loc_stop_task.png"/>
 			<Item Name="loc_ui_data.png" Type="Document" URL="../documentation/loc_ui_data.png"/>
 			<Item Name="loc_value_change_event.png" Type="Document" URL="../documentation/loc_value_change_event.png"/>
+			<Item Name="logo.png" Type="Document" URL="../Documentation/logo.png"/>
 			<Item Name="noloc_note.png" Type="Document" URL="../documentation/noloc_note.png"/>
 			<Item Name="noloc_tip.png" Type="Document" URL="../documentation/noloc_tip.png"/>
 		</Item>

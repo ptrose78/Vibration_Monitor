@@ -1,5 +1,9 @@
 <a name="top"></a>
 
+<div align="center">
+  <img src="Documentation/logo.jpg" alt="Vibration Monitor Logo" width="400"/>
+</div>
+
 # Vibration Monitor — Continuous Condition Monitoring System
 
 An industrial-grade, multi-threaded condition monitoring system built with a **LabVIEW Queued Message Handler (QMH)** architecture, an **asynchronous Python diagnostic coprocessor**, and a **batched SQLite telemetry & error logging engine**.
