@@ -269,7 +269,7 @@ RPM_PPR = 60.0
 The application features a robust loop error-checking architecture designed to isolate faults and prevent unhandled hardware exceptions from crashing the UI thread:
 
 * **NI-DAQmx Driver Faults:** Automatically captures critical hardware communication and task configuration errors within the NI-DAQmx error range (`-200000` to `-209999`), issuing a graceful application shutdown.
-* **Session & Resource Exceptions:** Explicitly intercepts LabVIEW hardware session errors (such as codes `1066` and `1071`).
+* **Session & Resource Exceptions:** Explicitly intercepts LabVIEW hardware session errors within error range (`1066` to `1070`).
 * **Database Error Logging:** Intercepts and logs all system faults, error codes, source loops, and timestamped descriptions directly into the `system_errors` table within `vibration_data.db`.
 
 [⬆ Back to Top](#-table-of-contents)
