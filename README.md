@@ -18,6 +18,7 @@ Designed for high-speed vibration acquisition, real-time spectral feature extrac
 * [🚀 Getting Started & Execution](#-getting-started--execution)
 * [⚙️ Configuration & Operational Modes](#%EF%B8%8F-configuration--operational-modes)
 * [🛠 Tech Stack & Dependencies](#-tech-stack--dependencies)
+* [🛡️ Error Handling & Fault Management](#️-error-handling--fault-management)
 * [📂 Directory Structure](#-directory-structure)
 * [🔬 Signal Processing & Diagnostic Mechanics](#-signal-processing--diagnostic-mechanics)
   * [1. True RMS Acceleration](#1-true-rms-acceleration)
@@ -88,7 +89,7 @@ The system segregates data acquisition, digital signal processing, local user in
 * **Resilient SQLite Telemetry Engine:** Optimized database engine with parameterized string escaping and batched transaction commits to eliminate disk I/O bottlenecks during sub-second logging updates.
 * **Latching Error Filtering & Network Recovery:** Edge-triggered state-latching suppresses error flooding during network disconnects while automatically purging socket queue backlogs upon reconnection.
 * **Decimated UI Rendering Pipeline:** Decimated Front Panel graph loop (10:1 iteration reduction) and optimized 1-second rolling history buffers to prevent memory allocation overflows and rendering backlogs.
-* **Synchronous Fault Shutdown Sequencing:** Reentrant error handler (`Check Loop Error.vi`) ensures critical hardware faults (e.g., DAQmx Error `-87`) are committed to SQLite before global shutdown commands tear down system threads.
+* **Synchronous Fault Shutdown Sequencing:** Error handler ensures critical hardware faults are committed to SQLite before global shutdown commands tear down system threads.
 
 [⬆ Back to Top](#-table-of-contents)
 
@@ -258,6 +259,18 @@ RPM_PPR = 60.0
 | **Coprocessor** | Python 3.x (`socket`, `json`) | Edge diagnostic health scoring & metric calculation |
 | **Database** | SQLite 3 (`SQLite3.dll` / LV SQLite Tools) | Local telemetry & event log persistence |
 | **Storage Formats** | SQLite, TDMS | Real-time logging & binary raw file archiving |
+
+[⬆ Back to Top](#-table-of-contents)
+
+---
+
+## 🛡️ Error Handling & Fault Management
+
+The application features a robust loop error-checking architecture designed to isolate faults and prevent unhandled hardware exceptions from crashing the UI thread:
+
+* **NI-DAQmx Driver Faults:** Automatically captures critical hardware communication and task configuration errors within the NI-DAQmx error range (`-200000` to `-209999`), issuing a graceful application shutdown.
+* **Session & Resource Exceptions:** Explicitly intercepts LabVIEW hardware session errors (such as codes `1066` and `1071`).
+* **Database Error Logging:** Intercepts and logs all system faults, error codes, source loops, and timestamped descriptions directly into the `system_errors` table within `vibration_data.db`.
 
 [⬆ Back to Top](#-table-of-contents)
 

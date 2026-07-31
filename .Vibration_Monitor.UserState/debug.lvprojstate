@@ -143,9 +143,9 @@
       </Breakpoints>
       <Probes>
         <Generic>
-          <SignalUID value="2885"/>
           <SignalUID value="3075"/>
           <SignalUID value="2713"/>
+          <SignalUID value="867"/>
         </Generic>
       </Probes>
     </VI>
